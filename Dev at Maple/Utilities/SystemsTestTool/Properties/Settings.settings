@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SystemsTestTool.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ValidRunAccount" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MPUK\ITsystemUser</Value>
+    </Setting>
+    <Setting Name="SdriveMap" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\Yak\Data</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

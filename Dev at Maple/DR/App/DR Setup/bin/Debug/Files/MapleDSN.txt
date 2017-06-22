@@ -1,0 +1,11 @@
+# Lines starting with # are comments
+# Valid lines contain DSN,Server,Database
+# seperated by commas.
+# Lines that are not valid will be ignored.
+BossUIConnection,minky,BOSS2000
+Reconciliation,minky,reconciliation
+FMOP2,mma1,fmop2
+PRRConnection,minky,boss2000
+RM_VAR,lynx,RM_VAR
+Boss,minky,boss2000
+TradeActivityFileGenerator,minky,boss2000

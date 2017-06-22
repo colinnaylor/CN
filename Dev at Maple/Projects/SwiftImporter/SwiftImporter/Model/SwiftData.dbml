@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Reconciliation" Class="SwiftDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MINKY;Initial Catalog=Reconciliation;Integrated Security=True" SettingsObjectName="SwiftImporter.Properties.Settings" SettingsPropertyName="ReconciliationConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SwiftStatement" Member="SwiftStatement_Olds">
+    <Type Name="SwiftStatement_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BIC" Type="System.String" DbType="varchar(50)" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StatementNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="varchar(100)" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccountNumber" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Currency" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OpeningBalance" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ClosingBalance" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="StatementType" Type="System.String" DbType="varchar(50)" CanBeNull="false" />
+      <Association Name="SwiftStatement_Old_SwiftStatementItem" Member="SwiftStatementItems" ThisKey="ID" OtherKey="StatementID" Type="SwiftStatementItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SwiftStatementActivity" Member="SwiftStatementItems">
+    <Type Name="SwiftStatementItem">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Narrative" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="StatementID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityIdentifier" Type="System.String" DbType="varchar(50)" CanBeNull="true" />
+      <Association Name="SwiftStatement_Old_SwiftStatementItem" Member="SwiftStatement_Old" Storage="_SwiftStatement" ThisKey="StatementID" OtherKey="ID" Type="SwiftStatement_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SwiftStatementsAll" Member="SwiftStatements">
+    <Type Name="SwiftStatement" Modifier="Abstract">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatementType" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" IsDiscriminator="true" />
+      <Column Name="BIC" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccountNumber" Type="System.String" DbType="VarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StatementNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="SwiftStatement_MT940Activity" Member="MT940Activities" ThisKey="ID" OtherKey="StatementID" Type="MT940Activity" />
+      <Association Name="SwiftStatement_MT535Activity" Member="MT535Activities" ThisKey="ID" OtherKey="StatementID" Type="MT535Activity" />
+      <Type Name="MT535" InheritanceCode="MT535">
+        <Column Name="SenderReference" Type="System.String" DbType="varchar(500)" CanBeNull="false" />
+      </Type>
+      <Type Name="MT940" InheritanceCode="MT940" IsInheritanceDefault="true">
+        <Column Name="Currency" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+        <Column Name="OpeningBalance" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+        <Column Name="ClosingBalance" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      </Type>
+    </Type>
+  </Table>
+  <Table Name="dbo.MT940Activity" Member="MT940Activities">
+    <Type Name="MT940Activity">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ValueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="StatementID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InsertedWhen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InsertedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="SwiftStatement_MT940Activity" Member="SwiftStatement" ThisKey="StatementID" OtherKey="ID" Type="SwiftStatement" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MT535Activity" Member="MT535Activities">
+    <Type Name="MT535Activity">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SecurityIdentifier" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AggrBalance" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="StatementID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InsertedWhen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InsertedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="SwiftStatement_MT535Activity" Member="SwiftStatement" ThisKey="StatementID" OtherKey="ID" Type="SwiftStatement" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.InsertSwiftStatement" Method="InsertSwiftStatement">
+    <Parameter Name="StatementType" Parameter="statementType" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="BIC" Parameter="bIC" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="AccNumber" Parameter="accNumber" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="StatementNumber" Parameter="statementNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SeqNumber" Parameter="seqNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertMT940Statement" Method="InsertMT940Statement">
+    <Parameter Name="StatementType" Parameter="statementType" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="BIC" Parameter="bIC" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="AccNumber" Parameter="accNumber" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="StatementNumber" Parameter="statementNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SeqNumber" Parameter="seqNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Currency" Parameter="currency" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="OpeningBal" Parameter="openingBal" Type="System.Double" DbType="Float" />
+    <Parameter Name="ClosingBal" Parameter="closingBal" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertMT535Statement" Method="InsertMT535Statement">
+    <Parameter Name="StatementType" Parameter="statementType" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="BIC" Parameter="bIC" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="AccNumber" Parameter="accNumber" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="StatementNumber" Parameter="statementNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SeqNumber" Parameter="seqNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Date" Parameter="date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="SenderReference" Parameter="senderReference" Type="System.String" DbType="VarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

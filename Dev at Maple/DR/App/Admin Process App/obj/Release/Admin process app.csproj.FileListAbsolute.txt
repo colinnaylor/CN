@@ -1,0 +1,9 @@
+C:\Users\colin\Documents\_Dev\DR\App\Admin Process App\bin\Release\Admin process app.exe.config
+C:\Users\colin\Documents\_Dev\DR\App\Admin Process App\bin\Release\Admin process app.exe
+C:\Users\colin\Documents\_Dev\DR\App\Admin Process App\bin\Release\Admin process app.pdb
+C:\Users\colin\Documents\_Dev\DR\App\Admin Process App\obj\Release\Admin_process_app.Form1.resources
+C:\Users\colin\Documents\_Dev\DR\App\Admin Process App\obj\Release\Admin_process_app.Properties.Resources.resources
+C:\Users\colin\Documents\_Dev\DR\App\Admin Process App\obj\Release\Admin process app.csproj.GenerateResource.Cache
+C:\Users\colin\Documents\_Dev\DR\App\Admin Process App\obj\Release\Admin process app.exe
+C:\Users\colin\Documents\_Dev\DR\App\Admin Process App\obj\Release\Admin process app.pdb
+C:\Users\colin\Documents\_Dev\DR\App\Admin Process App\obj\Release\Admin process app.csprojResolveAssemblyReference.cache

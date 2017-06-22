@@ -1,0 +1,7 @@
+C:\Users\colin\Documents\_Dev\Projects\OptionValue_DotNet\OptionValue_DotNet\OptionValue_DotNet_Test\bin\Debug\OptionValue_DotNet_Test.dll
+C:\Users\colin\Documents\_Dev\Projects\OptionValue_DotNet\OptionValue_DotNet\OptionValue_DotNet_Test\bin\Debug\OptionValue_DotNet_Test.pdb
+C:\Users\colin\Documents\_Dev\Projects\OptionValue_DotNet\OptionValue_DotNet\OptionValue_DotNet_Test\bin\Debug\OptionValue_DotNet.dll
+C:\Users\colin\Documents\_Dev\Projects\OptionValue_DotNet\OptionValue_DotNet\OptionValue_DotNet_Test\bin\Debug\OptionValue_DotNet.pdb
+C:\Users\colin\Documents\_Dev\Projects\OptionValue_DotNet\OptionValue_DotNet\OptionValue_DotNet_Test\obj\Debug\OptionValue_DotNet_Test.csprojResolveAssemblyReference.cache
+C:\Users\colin\Documents\_Dev\Projects\OptionValue_DotNet\OptionValue_DotNet\OptionValue_DotNet_Test\obj\Debug\OptionValue_DotNet_Test.dll
+C:\Users\colin\Documents\_Dev\Projects\OptionValue_DotNet\OptionValue_DotNet\OptionValue_DotNet_Test\obj\Debug\OptionValue_DotNet_Test.pdb

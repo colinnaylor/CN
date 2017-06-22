@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SwiftImporterConsole.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DSN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Reconciliation_Test</Value>
+    </Setting>
+    <Setting Name="ConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=devMINKY;Initial Catalog=Reconciliation;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="ConfigName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Local</Value>
+    </Setting>
+    <Setting Name="Recipients" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">charlie.wong@mpuk.com</Value>
+    </Setting>
+    <Setting Name="PollFolders" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;\\LondonFS1\d\export\data\Dev\Test\Reconciliations\MT300_FFT\*.*&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

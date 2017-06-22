@@ -1,0 +1,37 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace DBBrowser
+{
+
+    public class DBBrowserManager
+    {
+        private List<DBObject> objects = new List<DBObject>();
+
+        public bool Loaded = false;
+        public void Load()
+        {
+            objects = DataLayer.GetDBObjectList();
+            Loaded = true;
+        }
+        public List<DBObject> GetFilteredList(string s)
+        {
+            return objects.FindAll(x => x.Name.ToLower().Contains(s.ToLower())).OrderBy(x => x.Name).ToList();
+        }
+
+        public List<DBObject> GetFilteredExtendedList(string s)
+        {
+            objects = DataLayer.GetDBObjectExtendedList(s);
+
+            Loaded = false;
+            return objects;
+
+        }
+        public string GetObjectDefinition(DBObject o)
+        {
+            return DataLayer.GetDBObjectDefinition(o);
+
+        }
+
+    }
+}

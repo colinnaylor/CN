@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Microsoft.Samples.SqlServer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LastConnectedServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Minky</Value>
+    </Setting>
+    <Setting Name="EmailTo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">colin.naylor@mpuk.com</Value>
+    </Setting>
+    <Setting Name="SourceSafeProject" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">$/SQL Scripts/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

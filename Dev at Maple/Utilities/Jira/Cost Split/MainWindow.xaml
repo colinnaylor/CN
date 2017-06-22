@@ -1,0 +1,28 @@
+﻿<Window x:Class="Cost_Split.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Maple Cost Splits" Left="0" Height="700" Width="1200" Loaded="Window_Loaded_1"
+        Icon="./cost.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" VerticalAlignment="Top" Height="40" Margin="0,0,0,0">
+            <Label Content="From Date" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.346,-1.134" />
+            <DatePicker x:Name="DateFromPicker" HorizontalAlignment="Left"  Margin="10,10,0,0" VerticalAlignment="Top" />
+            <Label Content="To Date" HorizontalAlignment="Left" Margin="10,10,0,0" RenderTransformOrigin="-1.346,-1.134" VerticalAlignment="Top" Width="51"/>
+            <DatePicker x:Name="DateToPicker" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="112"/>
+            <Label Content="Employee" HorizontalAlignment="Left" Margin="10,10,0,0" RenderTransformOrigin="-1.346,-1.134" VerticalAlignment="Top" Width="62" Grid.Column="1"/>
+            <TextBox x:Name="EmployeeTextbox" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1" Width="99"/>
+            <Button x:Name="QueryButton" Content="Query" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="QueryButton_Click_1" Width="59" ToolTip="Query data already retrieved from Jira. Hit Fetch to get latest data"/>
+            <Button x:Name="CopyButton" Content="Copy Grid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="CopyButton_Click_1" Width="75" Visibility="Hidden"/>
+            <Button x:Name="FetchButton" Content="Fetch" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="FetchButton_Click_1" Width="59" ToolTip="Fetch latest data from Jira"/>
+            <DatePicker x:Name="FetchFromDatePicker" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="112"/>
+        </WrapPanel>
+        <DataGrid Grid.Row="1" x:Name="ResultGrid" IsReadOnly="True" AlternatingRowBackground="LightBlue" AlternationCount="2"
+                ScrollViewer.CanContentScroll="True" 
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
+                ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DR Setup", "DR Setup\DR Setup.csproj", "{CA0171BD-1080-4E36-A0CA-A571E1CE2856}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin process app", "Admin Process App\Admin process app.csproj", "{EFF61ACD-4F39-4AE5-9B50-89F4500F0C43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA0171BD-1080-4E36-A0CA-A571E1CE2856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0171BD-1080-4E36-A0CA-A571E1CE2856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0171BD-1080-4E36-A0CA-A571E1CE2856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0171BD-1080-4E36-A0CA-A571E1CE2856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF61ACD-4F39-4AE5-9B50-89F4500F0C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF61ACD-4F39-4AE5-9B50-89F4500F0C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF61ACD-4F39-4AE5-9B50-89F4500F0C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF61ACD-4F39-4AE5-9B50-89F4500F0C43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

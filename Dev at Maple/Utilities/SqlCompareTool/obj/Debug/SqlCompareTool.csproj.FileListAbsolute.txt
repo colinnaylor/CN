@@ -1,0 +1,6 @@
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\bin\Debug\SqlCompareTool.exe.config
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\obj\Debug\SqlCompareTool.csprojResolveAssemblyReference.cache
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\bin\Debug\SqlCompareTool.exe
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\bin\Debug\SqlCompareTool.pdb
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\obj\Debug\SqlCompareTool.exe
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\obj\Debug\SqlCompareTool.pdb

@@ -1,0 +1,5 @@
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\bin\Release\SqlCompareTool.exe.config
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\bin\Release\SqlCompareTool.exe
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\bin\Release\SqlCompareTool.pdb
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\obj\Release\SqlCompareTool.exe
+C:\Users\colin\Documents\_Dev\Utilities\SqlCompareTool\obj\Release\SqlCompareTool.pdb

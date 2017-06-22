@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="All three (current) data types have an input source and a capture time - the input source defaults to MISSING">
+    <Position X="6.75" Y="0.75" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="BOSS_OptionValueManager.InputSourceData.SourceData">
+    <Position X="3.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>InputSourceData\SourceData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Source" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BOSS_OptionValueManager.VolatilitySourceData">
+    <Position X="0.5" Y="3" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="BOSS_OptionValueManager.InputSourceData.SourceData" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="1.863" />
+        <Point X="4.5" Y="2.625" />
+        <Point X="1.5" Y="2.625" />
+        <Point X="1.5" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InputSourceData\VolatilitySourceData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BOSS_OptionValueManager.RateSourceData">
+    <Position X="3.25" Y="3" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="BOSS_OptionValueManager.InputSourceData.SourceData" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="1.863" />
+        <Point X="4.5" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAEAAAAAAAIAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>InputSourceData\RateSourceData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BOSS_OptionValueManager.DividendSourceData">
+    <Position X="6.75" Y="3" Width="2" />
+    <InheritanceLine Type="BOSS_OptionValueManager.InputSourceData.SourceData" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="1.863" />
+        <Point X="4.5" Y="2.625" />
+        <Point X="7.75" Y="2.625" />
+        <Point X="7.75" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>InputSourceData\DividendSourceData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BOSS_OptionValueManager.InputSourceData.InputSource">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIQAAAAAAAAAAAAAAAAAgAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>InputSourceData\InputSource.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

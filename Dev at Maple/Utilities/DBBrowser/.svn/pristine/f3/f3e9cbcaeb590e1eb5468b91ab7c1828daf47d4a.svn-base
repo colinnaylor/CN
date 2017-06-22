@@ -1,0 +1,8 @@
+﻿export sp to sqlms i.e. create file, insert sp text, shell open file.sql
+
+put object type list in settings
+
+wildcard search
+search for SPs containing text
+
+group by server (and db)?

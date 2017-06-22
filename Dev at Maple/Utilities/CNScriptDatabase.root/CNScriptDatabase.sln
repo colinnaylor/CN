@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNScriptDatabase", "CNScriptDatabase\CNScriptDatabase.csproj", "{903C2229-B613-4EEC-BB85-9611AC841B2E}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = CNScriptDatabase\\CNScriptDatabase.csproj
+		SccProjectName0 = \u0022$/Utilities/CNScriptDatabase.root/CNScriptDatabase\u0022,\u0020PPSAAAAA
+		SccLocalPath0 = CNScriptDatabase
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{903C2229-B613-4EEC-BB85-9611AC841B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903C2229-B613-4EEC-BB85-9611AC841B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903C2229-B613-4EEC-BB85-9611AC841B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903C2229-B613-4EEC-BB85-9611AC841B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+﻿Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\ConnectTo]
+"DSQUERY"="DBNETLIB"
+"MINKY"="DBNMPNTW,\\\\%SqlServer%\\PIPE\\sql\\query"
+"MMA1"="DBNMPNTW,\\\\%SqlServer%\\PIPE\\sql\\query"
+"LondonSun1"="DBNMPNTW,\\\\%SqlServer%\\PIPE\\sql\\query"
+"LYNX"="DBNMPNTW,\\\\%SqlServer%\\PIPE\\sql\\query"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSSQLServer\Client\ConnectTo]
+"DSQUERY"="DBNETLIB"
+"MINKY"="DBNMPNTW,\\\\%SqlServer%\\PIPE\\sql\\query"
+"MMA1"="DBNMPNTW,\\\\%SqlServer%\\PIPE\\sql\\query"
+"LondonSun1"="DBNMPNTW,\\\\%SqlServer%\\PIPE\\sql\\query"
+"LYNX"="DBNMPNTW,\\\\%SqlServer%\\PIPE\\sql\\query"
+

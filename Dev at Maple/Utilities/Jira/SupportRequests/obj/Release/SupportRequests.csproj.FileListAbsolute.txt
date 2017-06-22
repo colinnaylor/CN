@@ -1,0 +1,12 @@
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\bin\Release\SupportRequests.exe
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\bin\Release\SupportRequests.pdb
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\bin\Release\Atlassian.Jira.dll
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\bin\Release\Maple.dll
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\bin\Release\Atlassian.Jira.pdb
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\bin\Release\Atlassian.Jira.xml
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\bin\Release\Maple.pdb
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\bin\Release\Maple.xml
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\obj\Release\SupportRequests.csprojResolveAssemblyReference.cache
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\obj\Release\SupportRequests.exe
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\obj\Release\SupportRequests.pdb
+C:\Users\colin\Documents\_Dev\Utilities\Jira\SupportRequests\bin\Release\SupportRequests.exe.config

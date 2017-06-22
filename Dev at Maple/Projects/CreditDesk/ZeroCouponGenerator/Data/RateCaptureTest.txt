@@ -1,0 +1,152 @@
+[GBP]
+startdate\24 Feb 12
+DayCountConvention\0
+NextWorkingDay\0
+HolidayCentre\England
+maxFutureTermInDays\540
+settleDaysForFutures\1
+settleDaysForSwaps\1
+settleDaysForLibor\3
+liborDayCountConvention\0
+futureDayCountConvention\0
+swapFixedDayCountConvention\0
+swapFloatPaymentFrequency\2
+swapFixedPaymentFrequency\2
+
+Libor,ON,0.55,0.7,0.55,
+Libor,TN,0.6,0.7,0.6,
+Libor,SW,0.42,0.62,0.42,
+Libor,2W,0.65,0.8,0.65,
+Libor,1M,0.55,0.75,0.55,
+Libor,2M,0.7,0.9,0.7,
+Libor,3M,0.51,0.81,0.51,
+Libor,6M,1.33,1.53,1.33,
+Libor,9M,1.6,1.8,1.6,
+Libor,1Y,1.84,2.04,1.84,
+Future,FSSH2,98.98,98.99,0,21 Mar 12
+Future,FSSJ2,0,0,0,18 Apr 12
+Future,FSSK2,0,0,0,16 May 12
+Future,FSSM2,99.03,99.04,0,20 Jun 12
+Future,FSSU2,99.05,99.06,0,19 Sep 12
+Future,FSSZ2,99.05,99.06,0,19 Dec 12
+Future,FSSH3,99.05,99.06,0,20 Mar 13
+Future,FSSM3,99.02,99.03,0,19 Jun 13
+Future,FSSU3,0,0,0,18 Sep 13
+Future,FSSZ3,0,0,0,18 Dec 13
+Future,FSSH4,0,0,0,19 Mar 14
+Future,FSSM4,0,0,0,18 Jun 14
+Future,FSSU4,0,0,0,17 Sep 14
+Future,FSSZ4,0,0,0,17 Dec 14
+Future,FSSH5,0,0,0,18 Mar 15
+Future,FSSM5,0,0,0,17 Jun 15
+Swap,2Y,1.2313,1.2713,0,
+Swap,3Y,1.309,1.319,0,
+Swap,4Y,1.4004,1.4504,0,
+Swap,5Y,1.58,1.59,0,
+Swap,6Y,1.755,1.765,0,
+Swap,7Y,1.933,1.943,0,
+Swap,8Y,2.108,2.118,0,
+Swap,9Y,2.268,2.278,0,
+Swap,10Y,2.405,2.415,0,
+[EUR]
+startdate\8 Mar 12
+DayCountConvention\1
+NextWorkingDay\0
+HolidayCentre\Target
+maxFutureTermInDays\540
+settleDaysForFutures\1
+settleDaysForSwaps\2
+settleDaysForLibor\3
+liborDayCountConvention\1
+futureDayCountConvention\1
+swapFixedDayCountConvention\3
+swapFloatPaymentFrequency\2
+swapFixedPaymentFrequency\1
+
+Libor,ON,0.2,0.35,0.2,
+Libor,TN,0.2,0.35,0.2,
+Libor,SW,0.24,0.42,0.24,
+Libor,2W,0.23,0.38,0.23,
+Libor,1M,0.35,0.47,0.4,
+Libor,2M,0.64,0.74,0.64,
+Libor,3M,0.85,0.95,0.85,
+Libor,6M,0.88,1,0.88,
+Libor,9M,0.93,1.05,0.93,
+Libor,1Y,1.01,1.13,1.27,
+Future,FEIH2,99.155,99.16,0,19 Mar 12
+Future,FEIJ2,0,0,0,16 Apr 12
+Future,FEIK2,0,0,0,14 May 12
+Future,FEIM2,99.3,99.305,0,18 Jun 12
+Future,FEIN2,0,0,0,16 Jul 12
+Future,FEIU2,99.335,99.34,0,17 Sep 12
+Future,FEIZ2,99.315,99.32,0,17 Dec 12
+Future,FEIH3,99.29,99.295,0,18 Mar 13
+Future,FEIM3,99.24,99.245,0,17 Jun 13
+Future,FEIU3,0,0,0,16 Sep 13
+Future,FEIZ3,0,0,0,16 Dec 13
+Future,FEIH4,0,0,0,17 Mar 14
+Future,FEIM4,0,0,0,16 Jun 14
+Future,FEIU4,0,0,0,15 Sep 14
+Future,FEIZ4,0,0,0,15 Dec 14
+Swap,1Y,0.733,0.764,0,
+Swap,2Y,1.055,1.085,0,
+Swap,3Y,1.154,1.164,0,
+Swap,4Y,1.324,1.335,0,
+Swap,5Y,1.507,1.538,0,
+Swap,6Y,1.707,1.727,0,
+Swap,7Y,1.879,1.899,0,
+Swap,8Y,2.022,2.042,0,
+Swap,9Y,2.14,2.16,0,
+Swap,10Y,2.248,2.257,0,
+
+[USD]
+startdate\8 Mar 12
+DayCountConvention\1
+NextWorkingDay\0
+HolidayCentre\USA
+maxFutureTermInDays\720
+settleDaysForFutures\1
+settleDaysForSwaps\2
+settleDaysForLibor\2
+liborDayCountConvention\1
+futureDayCountConvention\2
+swapFixedDayCountConvention\2
+swapFloatPaymentFrequency\4
+swapFixedPaymentFrequency\2
+
+Libor,ON,0.12,0.26,0.12,
+Libor,TN,0.1,0.45,0.1,
+Libor,SW,0.16,0.32,0.16,
+Libor,2W,0.2,0.34,0.2,
+Libor,1M,0.24,0.54,0.24,
+Libor,2M,0.36,0.66,0.36,
+Libor,3M,0.47,0.72,0.47,
+Libor,6M,0.61,0.86,0.61,
+Libor,9M,0.88,1.18,0.88,
+Libor,1Y,1.06,1.36,1.06,
+Future,EDH2,99.5375,99.54,0,19 Mar 12
+Future,EDJ2,0,0,0,16 Apr 12
+Future,EDK2,0,0,0,14 May 12
+Future,EDM2,99.55,99.555,0,18 Jun 12
+Future,EDN2,0,0,0,16 Jul 12
+Future,EDQ2,0,0,0,13 Aug 12
+Future,EDU2,99.52,99.525,0,17 Sep 12
+Future,EDZ2,99.485,99.49,0,17 Dec 12
+Future,EDH3,99.45,99.455,0,18 Mar 13
+Future,EDM3,99.4,99.405,0,17 Jun 13
+Future,EDU3,99.34,99.345,0,16 Sep 13
+Future,EDZ3,99.275,99.28,0,16 Dec 13
+Future,EDH4,0,0,0,17 Mar 14
+Future,EDM4,0,0,0,16 Jun 14
+Future,EDU4,0,0,0,15 Sep 14
+Future,EDZ4,0,0,0,15 Dec 14
+Swap,1Y,0.467,0.487,0,
+Swap,2Y,0.544,0.558,0,
+Swap,3Y,0.653,0.693,0,
+Swap,4Y,0.853,0.892,0,
+Swap,5Y,1.097,1.108,0,
+Swap,6Y,1.325,1.365,0,
+Swap,7Y,1.55,1.59,0,
+Swap,8Y,1.753,1.766,0,
+Swap,9Y,1.912,1.924,0,
+Swap,10Y,2.04,2.08,0,

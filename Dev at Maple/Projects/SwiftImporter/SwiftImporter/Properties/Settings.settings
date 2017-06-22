@@ -1,0 +1,40 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SwiftImporter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ScheduledRunTime" Type="System.TimeSpan" Scope="Application">
+      <Value Profile="(Default)">08:30:00</Value>
+    </Setting>
+    <Setting Name="SwiftFilesPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\swiftprod\SWIFT_FILES\</Value>
+    </Setting>
+    <Setting Name="DSN_LIVE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Reconciliation</Value>
+    </Setting>
+    <Setting Name="DSN_TEST" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Reconciliation_Test</Value>
+    </Setting>
+    <Setting Name="ReconciliationConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=MINKY;Initial Catalog=Reconciliation;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=MINKY;Initial Catalog=Reconciliation;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="reconciliationConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=uatMinky;Initial Catalog=reconciliation;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=uatMinky;Initial Catalog=reconciliation;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="DSN_TEST_UAT" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Reconciliation_Test_UAT</Value>
+    </Setting>
+    <Setting Name="SwiftFilesPath_TEST" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Temp\SWIFT_FILES\</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

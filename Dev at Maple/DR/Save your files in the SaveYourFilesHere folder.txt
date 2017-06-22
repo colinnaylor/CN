@@ -1,0 +1,7 @@
+Save any files that you wish to keep in the folder named
+
+SaveYourFilesHere
+
+The SaveYourFilesHere folder will not be overwritten by the scheduled task that runs on Swallow each night.
+For more detail, see http://sharepoint/SiteDirectory/ITDev/MARS%20Wiki/DR%20files.aspx
+

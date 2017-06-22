@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.625, 8.5" name="SwiftData">
+  <DataContextMoniker Name="/SwiftDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c65450ee-1e32-4a45-87f6-f6033a02dee0" absoluteBounds="1.5, 0.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/SwiftDataDataContext/SwiftStatement_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c7543a8-2bd5-422b-abc5-081035f23bb3" absoluteBounds="1.5150000000000001, 0.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d12ab78b-8cc9-4fa9-b3d8-4e481fd115fb" absoluteBounds="4.625, 0.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/SwiftDataDataContext/SwiftStatementItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f059b9c-2367-462b-9884-20e0e7c3dd21" absoluteBounds="4.6400000000000006, 1.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e9066f6-5cfc-4de3-8106-177aaf6a9451" absoluteBounds="4.75, 3.375, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/SwiftDataDataContext/SwiftStatement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="412d26b8-8e74-4f2f-9469-66cf33f6fe06" absoluteBounds="4.765, 3.835, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85985ce2-3bc4-4b4b-9611-49c4a5eb7389" absoluteBounds="3, 6.25, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/SwiftDataDataContext/MT940" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f85a9fe8-e1cf-46aa-802a-43cd3af5c56c" absoluteBounds="3.0150000000000006, 6.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bf80a3f5-4a12-4329-8399-e77088af087c" absoluteBounds="9.25, 2.75, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/SwiftDataDataContext/MT940Activity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ac7bbfd-7b61-4e23-a692-5eab6566532f" absoluteBounds="9.265, 3.21, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c9880bd-fca0-4935-8b01-232990388f7d" absoluteBounds="9.375, 5.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SwiftDataDataContext/MT535Activity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d86b2ea-e590-41b4-9941-a030323fc064" absoluteBounds="9.39, 5.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab10dc6b-2fb6-4be5-9535-8a371d85991c" absoluteBounds="6.125, 6.25, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/SwiftDataDataContext/MT535" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3120e61c-f402-4e68-9154-d5cbb36c6d6f" absoluteBounds="6.14, 6.71, 1.9700000000000002, 0.44169108072916663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <inheritanceConnector edgePoints="[(5.75 : 5.72280110677083); (5.75 : 5.875); (7.125 : 5.875); (7.125 : 6.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="3e9066f6-5cfc-4de3-8106-177aaf6a9451" />
+        <classShapeMoniker Id="ab10dc6b-2fb6-4be5-9535-8a371d85991c" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(5.75 : 5.72280110677083); (5.75 : 5.875); (5.45833083333333 : 5.875 : JumpStart); (5.29166416666667 : 5.875 : JumpEnd); (4 : 5.875); (4 : 6.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="3e9066f6-5cfc-4de3-8106-177aaf6a9451" />
+        <classShapeMoniker Id="85985ce2-3bc4-4b4b-9611-49c4a5eb7389" />
+      </nodes>
+    </inheritanceConnector>
+    <associationConnector edgePoints="[(6.75 : 4.10361857096354); (9.25 : 4.10361857096354)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SwiftDataDataContext/SwiftStatement/SwiftStatement_MT940Activity" />
+      <nodes>
+        <classShapeMoniker Id="3e9066f6-5cfc-4de3-8106-177aaf6a9451" />
+        <classShapeMoniker Id="bf80a3f5-4a12-4329-8399-e77088af087c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.3749975 : 5.72280110677083); (5.3749975 : 6.03125); (7.04166666666667 : 6.03125 : JumpStart); (7.20833333333333 : 6.03125 : JumpEnd); (9.375 : 6.03125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SwiftDataDataContext/SwiftStatement/SwiftStatement_MT535Activity" />
+      <nodes>
+        <classShapeMoniker Id="3e9066f6-5cfc-4de3-8106-177aaf6a9451" />
+        <classShapeMoniker Id="3c9880bd-fca0-4935-8b01-232990388f7d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 1.60659912109375); (4.625 : 1.60659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SwiftDataDataContext/SwiftStatement_Old/SwiftStatement_Old_SwiftStatementItem" />
+      <nodes>
+        <classShapeMoniker Id="c65450ee-1e32-4a45-87f6-f6033a02dee0" />
+        <classShapeMoniker Id="d12ab78b-8cc9-4fa9-b3d8-4e481fd115fb" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

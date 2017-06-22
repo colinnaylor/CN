@@ -1,0 +1,1 @@
+C:\Users\colin\Documents\_Dev\Projects\CreditDesk\ZeroCouponGenerator\bin\Debug\ZeroCouponGenerator.exe.config

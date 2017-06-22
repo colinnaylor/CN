@@ -1,0 +1,54 @@
+﻿-- Systems Test Tool
+------------------------------------------------------------------------------------------------------------------------
+  -- Systems Test Tool Script for DR
+  -- Last edited by Colin Naylor 2015 12 14
+------------------------------------------------------------------------------------------------------------------------
+
+--########################################################################################################
+--Step -- Ping Londondrapps -- cmd
+
+Ping Londondrapps
+
+--########################################################################################################
+--Step -- Ping Yak -- cmd
+
+Ping Yak
+
+--########################################################################################################
+--Step -- DrSql2 SQL connectivity -- sql
+
+:Connect DrSql2
+select @@Servername
+
+--########################################################################################################
+--Step -- ApexP linked server on DrSql2 -- sql
+:Connect DrSql2
+select * from openquery(APEXP,'select * from martini.Account where ACCOUNT_SID = 8')
+--########################################################################################################
+--Step -- Kondor linked server on DrSql2 -- sql
+:Connect DrSql2
+select * from openquery(Kondor,'select @@Servername')
+--########################################################################################################
+--Step -- NJ linked server on DrSql2 -- sql
+:Connect DrSql2
+select * from openquery(NJ,'select @@Servername')
+--########################################################################################################
+--Step -- Toronto linked server on DrSql2 -- sql
+:Connect DrSql2
+select * from openquery(Toronto,'select @@Servername')
+--########################################################################################################
+--Step -- TorontoReporting linked server on DrSql2 -- sql
+:Connect DrSql2
+select * from openquery(TorontoReporting,'select @@Servername')
+
+--########################################################################################################
+--Step -- Read folder S:\Dev -- cmd
+dir s:\dev
+
+--########################################################################################################
+--Step -- Boss Application runs -- cmd
+AppLaunch Files\RunBoss.cmd
+Wait 10
+FindWindow "BossUI"
+
+

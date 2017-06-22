@@ -1,0 +1,30 @@
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Cost Split.exe
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Cost Split.pdb
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\obj\Debug\Cost Split.csprojResolveAssemblyReference.cache
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\obj\Debug\MainWindow.baml
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\obj\Debug\MainWindow.g.cs
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\obj\Debug\App.g.cs
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\obj\Debug\Cost Split_MarkupCompile.cache
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\obj\Debug\Cost Split.g.resources
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\obj\Debug\Cost_Split.Properties.Resources.resources
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\obj\Debug\Cost Split.csproj.GenerateResource.Cache
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\obj\Debug\Cost Split.exe
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\obj\Debug\Cost Split.pdb
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Atlassian.Jira.dll
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Atlassian.Jira.pdb
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Atlassian.Jira.xml
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Maple.dll
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Maple.pdb
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Maple.xml
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Cost Split.exe.config
+s:\dev\Build\Cost Split.exe.config
+s:\dev\Build\&projectname&\Cost Split.exe.config
+s:\dev\Build\$(Projectname)\Cost Split.exe.config
+s:\dev\Build\$(Projectname)\Cost Split.exe
+s:\dev\Build\$(Projectname)\Cost Split.pdb
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\ConfigureFor.cmd
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Config\Release_app.config
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Config\Uat_app.config
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\Config\Debug_app.config
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\NLog.dll
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Cost Split\bin\Debug\NLog.xml

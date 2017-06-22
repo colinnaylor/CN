@@ -1,0 +1,55 @@
+﻿<Window x:Class="DBBrowser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DB Object Search" Height="480" Width="721" Loaded="Window_Loaded" FontFamily="Calibri" WindowState="Maximized" Background="{x:Null}" Icon="database_4_48.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition />
+            <RowDefinition Height="34" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="509" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Foreground="{DynamicResource TEXT_DATA}" Content="Search" HorizontalAlignment="Left" Margin="3,4,0,0" VerticalAlignment="Top" Width="47" Height="25"/>
+        <TextBox HorizontalAlignment="Left" Margin="49,7,0,13" TabIndex="1" Name="textBox1" VerticalAlignment="Stretch" Text="" IsReadOnly="False" GotFocus="textBox1_GotFocus" TextChanged="textBox1_TextChanged" FontWeight="Normal" Foreground="{DynamicResource TEXT_DATA}" Width="359" FontFamily="Courier New" Background="#FF363535" />
+        <CheckBox x:Name="chkDeep" Content="Deep" Checked="chkDeep_Checked" Unchecked="chkDeep_Unchecked" Margin="413,10,0,15" HorizontalAlignment="Left" Foreground="White" Width="47"/>
+
+        <RichTextBox HorizontalAlignment="Stretch" Margin="10" Name="richTextBox1" VerticalAlignment="Stretch" FontSize="11" Grid.Column="1" Grid.RowSpan="1" FontFamily="Courier New" Grid.Row="1" Foreground="{DynamicResource TEXT_DATA}">
+            <RichTextBox.Background>
+                <ImageBrush />
+            </RichTextBox.Background>
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+            <RichTextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+                    <GradientStop Color="#FFABADB3" Offset="0.05"/>
+                    <GradientStop Color="#FFE2E3EA" Offset="0.07"/>
+                    <GradientStop Color="#FF2B2C2C" Offset="1"/>
+                </LinearGradientBrush>
+            </RichTextBox.BorderBrush>
+        </RichTextBox>
+        <DataGrid AutoGenerateColumns="False" Grid.ColumnSpan="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="10,0,0,0" Name="dataGrid1" VerticalAlignment="Stretch" DataContext="{Binding}" FontSize="11" GridLinesVisibility="None" SelectionChanged="dataGrid1_SelectionChanged" Background="Transparent" VerticalScrollBarVisibility="Hidden">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Copy list" Click="CopyDataGridToClipboard"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Description}" Header="  Object" Width="300"/>
+                <DataGridTextColumn Binding="{Binding Server}" Header="Server" Width="80" />
+                <DataGridTextColumn Binding="{Binding Database}" Header="Database" Width="80"/>
+                <DataGridTextColumn Binding="{Binding Type}" Header="Type" Width="40"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Export" Grid.Column="1" Grid.Row="2" Height="24" HorizontalAlignment="Right" Margin="0,0,8,6" Name="btnExport" VerticalAlignment="Bottom" Width="75" Click="btnExport_Click" />
+        <CheckBox x:Name="chkDeepWholeWord" Content="(Whole word)" Margin="474,10,0,15" HorizontalAlignment="Left" Foreground="White" Width="110" Grid.ColumnSpan="2"/>
+        <CheckBox x:Name="chkDeepIgnoreComments" Content="(Ignore comments)" Margin="63,10,0,15" HorizontalAlignment="Left" Foreground="White" Width="110" Grid.Column="1"/>
+
+    </Grid>
+</Window>

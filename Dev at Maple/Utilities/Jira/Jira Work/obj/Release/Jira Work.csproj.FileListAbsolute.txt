@@ -1,0 +1,15 @@
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Release\JiraWork.exe.config
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Release\JiraWork.exe
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Release\JiraWork.pdb
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Release\Atlassian.Jira.dll
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Release\Maple.dll
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Release\Atlassian.Jira.pdb
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Release\Atlassian.Jira.xml
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Release\Maple.pdb
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Release\Maple.xml
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Release\Jira_Connection.Form1.resources
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Release\Jira_Connection.Properties.Resources.resources
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Release\Jira Work.csproj.GenerateResource.Cache
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Release\JiraWork.exe
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Release\JiraWork.pdb
+C:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Release\Jira Work.csprojResolveAssemblyReference.cache

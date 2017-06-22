@@ -1,0 +1,8 @@
+A script runs regularly which replaces these files at DR with the ones from sourcesafe given below. 
+Please save any changes to the folder named "SaveYourFilesHere" and check into Sourcesafe when you are done.
+
+$/DR
+
+See Sharepoint for full details:
+http://sharepoint/SiteDirectory/ITDev/MARS%20Wiki/DR%20files.aspx
+

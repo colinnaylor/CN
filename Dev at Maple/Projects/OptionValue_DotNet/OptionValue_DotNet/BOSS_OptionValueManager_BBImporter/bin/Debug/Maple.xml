@@ -1,0 +1,4005 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Maple</name>
+    </assembly>
+    <members>
+        <member name="F:Maple.ApplicationStatus.WaitUntil">
+            <summary>
+            Variable that tells this class to wait. Set when a problem has occurred
+            </summary>
+        </member>
+        <member name="M:Maple.ApplicationStatus.SetStatus(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Updates the status of a system into the central Status Store
+            </summary>
+            <param name="SystemName">The name of the system as you wish it to appear in the Status Store</param>
+            <param name="Status">The current status of the calling system</param>
+            <param name="Message">Any user message that you wish to be recorded</param>
+            <param name="ExpectedMinutesDelay">The number of minutes that you expect to pass before you will write the status again</param>
+        </member>
+        <member name="M:Maple.Cryptography.PGP.GPG.EncryptGPG(System.String,System.String)">
+            <summary>
+            Encrypt a file using installed GPG. Returns an empty string on success else an error message.
+            </summary>
+            <param name="filename"></param>
+            <param name="recipient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Cryptography.PGP.GPG.DecryptGPG(System.String,System.String,System.String)">
+            <summary>
+            Decrypt a file using installed pgp. Returns an empty string on success else an error message.
+            </summary>
+            <param name="filename"></param>
+            <param name="outFile"></param>
+            <param name="passPhrase"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.Cryptography.PGP.MessageEventArgs">
+            <summary>
+            A custom EventArgs class to hold any extra data that we require
+            </summary>
+        </member>
+        <member name="T:Maple.Cryptography.PGP.MessageEventDelegate">
+            <summary>
+            A delegate that uses the class declared above
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.Email">
+            <summary>
+            Send emails
+            </summary>
+        </member>
+        <member name="M:Maple.Email.AddAttachment(System.String)">
+            <summary>
+            Adds the attachment.
+            </summary>
+            <param name="filename">The filename.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Email.GroupMembers(System.String)">
+            <summary>
+            Get a list of members belonging to the group given. Searches in FMOP2.MailGroupMembers
+            </summary>
+            <param name="group">The group.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.ExtensionMethods">
+            <summary>
+            Houses common extension methods for use in our applications
+            </summary>
+        </member>
+        <member name="M:Maple.ExtensionMethods.SubStringSafe(System.String,System.Int32,System.Int32)">
+            <summary>
+            Calls C# SubString method but first checks to ensure that the string is long enough to apply the Length to
+            </summary>
+            <param name="Start">The zero-based starting character position of a substring in this instance</param>
+            <param name="Length">The number of characters in the substring</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.ExtensionMethods.Args(System.String,System.Object[])">
+            <summary>
+            Provides string.Format() functionality without string.Format("{0}, {1}", foo, bar, ...) syntax.
+            </summary>
+            <param name="s">Input string.</param>
+            <param name="args">Format arguments.</param>
+            <returns>Formatted string.</returns>
+        </member>
+        <member name="M:Maple.FixCalc.checksum(System.Text.StringBuilder)">
+            <summary>
+            Checksums the specified check sum data.
+            </summary>
+            <param name="checkSumData">The check sum data.</param>
+            <returns></returns>
+        </member>
+        <member name="F:Maple.FixCompany.Maple">
+            <summary>
+            The Maple company string
+            </summary>
+        </member>
+        <member name="F:Maple.FixVer.fixVersion">
+            <summary>
+            The FIX version
+            </summary>
+        </member>
+        <member name="M:Maple.FixUtils.base64StringToByteArray(System.String)">
+            <summary>
+            Base64s the string to byte array.
+            </summary>
+            <param name="aString">A string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixUtils.byteArrayToBase64String(System.Byte[])">
+            <summary>
+            Bytes the array to base64 string.
+            </summary>
+            <param name="bytes">The bytes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixUtils.stringToByteArray(System.String)">
+            <summary>
+            Strings to byte array.
+            </summary>
+            <param name="aString">A string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixUtils.byteArrayToString(System.Byte[],System.Int32)">
+            <summary>
+            Bytes the array to string.
+            </summary>
+            <param name="bytes">The bytes.</param>
+            <param name="numBytesToDecode">The num bytes to decode.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.FixExecutionReport.Report">
+            <summary>
+            The FIX execution Report
+            </summary>
+        </member>
+        <member name="T:Maple.FixMessage.Message">
+            <summary>
+            The FIX message
+            </summary>
+        </member>
+        <member name="T:Maple.FixApplication.Application">
+            <summary>
+            The FIX Application class
+            </summary>
+        </member>
+        <member name="M:Maple.FixApplication.Application.setupQueueTimer">
+            <summary>
+            Setups the queue timer.
+            </summary>
+        </member>
+        <member name="M:Maple.FixApplication.Application.setupConnectDisconnectTimers">
+            <summary>
+            Setups the connect disconnect timers.
+            </summary>
+        </member>
+        <member name="M:Maple.FixApplication.Application.pDisconnectTimer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Handles the Elapsed event of the pDisconnectTimer control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Timers.ElapsedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.pConnectTimer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Handles the Elapsed event of the pConnectTimer control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Timers.ElapsedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.pQueueTimer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Handles the Elapsed event of the pQueueTimer control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Timers.ElapsedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.connectListener(System.Net.Sockets.Socket)">
+            <summary>
+            Connects the listener.
+            </summary>
+            <param name="listener">The listener.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.doConnectListener(System.Net.Sockets.Socket)">
+            <summary>
+            Does the connect listener.
+            </summary>
+            <param name="listener">The listener.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Maple.FixApplication.Application.pFixConnection_sessionEstablished(System.Object,System.EventArgs)">
+            <summary>
+            Handles the sessionEstablished event of the pFixConnection control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.connect(System.String,System.Int32,System.Int32)">
+            <summary>
+            Connects the specified server.
+            </summary>
+            <param name="server">The server.</param>
+            <param name="port">The port.</param>
+            <param name="timeOutMilliseconds">The time out milliseconds.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.disconnect(System.Int32)">
+            <summary>
+            Disconnects the specified time out milliseconds.
+            </summary>
+            <param name="timeOutMilliseconds">The time out milliseconds.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.ConnectionEstablished(System.IAsyncResult)">
+            <summary>
+            Connections the established.
+            </summary>
+            <param name="ar">The ar.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.pFixConnection_sessionProblem(System.String)">
+            <summary>
+            Ps the fix connection_session problem.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.pFixConnection_hostLoggedOut(System.String)">
+            <summary>
+            Ps the fix connection_host logged out.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.socketConnected">
+            <summary>
+            Sockets the connected.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixApplication.Application.processMessage(Maple.FixMessage.Message)">
+            <summary>
+            Processes the message.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.fillExecutionReport(Maple.FixExecutionReport.Report)">
+            <summary>
+            Fills the execution report.
+            </summary>
+            <param name="executionReport">The execution report.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.forceResendRequest(System.Int64,System.Int64)">
+            <summary>
+            Forces the resend request.
+            </summary>
+            <param name="beginSeqNum">The begin seq num.</param>
+            <param name="endSeqNum">The end seq num.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.loggedIn">
+            <summary>
+            Loggeds the in.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixApplication.Application.initiateLoginWithSeqNumReset">
+            <summary>
+            Initiates the login with seq num reset.
+            </summary>
+        </member>
+        <member name="M:Maple.FixApplication.Application.queueApplicationDataForOutbound(System.String)">
+            <summary>
+            Queues the application data for outbound.
+            </summary>
+            <param name="applicationData">The application data.</param>
+        </member>
+        <member name="M:Maple.FixApplication.Application.updateStatus(Maple.FixApplication.eStatus,System.String)">
+            <summary>
+            Updates the status.
+            </summary>
+            <param name="status">The status.</param>
+            <param name="feedback">The feedback.</param>
+        </member>
+        <member name="P:Maple.FixApplication.Application.status">
+            <summary>
+            Gets the status.
+            </summary>
+        </member>
+        <member name="T:Maple.FixSession.RejectReason">
+            <summary>
+            The Session Rejection reason
+            </summary>
+        </member>
+        <member name="T:Maple.FixSession.Connection">
+            <summary>
+            The FIX connection
+            </summary>
+        </member>
+        <member name="M:Maple.FixSession.Connection.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.FixSession.Connection"/> class.
+            </summary>
+            <param name="senderCompID">The sender comp ID.</param>
+            <param name="targetCompID">The target comp ID.</param>
+            <param name="heartBeatInterval">The heart beat interval.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.#ctor(System.String,System.String,System.Int32,System.Int64,System.Int64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.FixSession.Connection"/> class.
+            </summary>
+            <param name="senderCompID">The sender comp ID.</param>
+            <param name="targetCompID">The target comp ID.</param>
+            <param name="heartBeatInterval">The heart beat interval.</param>
+            <param name="msgSeqNoRx">The MSG seq no rx.</param>
+            <param name="msgSeqNoTx">The MSG seq no tx.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.connection(System.String,System.String,System.Int32,System.Int64,System.Int64)">
+            <summary>
+            Connections the specified sender comp ID.
+            </summary>
+            <param name="senderCompID">The sender comp ID.</param>
+            <param name="targetCompID">The target comp ID.</param>
+            <param name="heartBeatInterval">The heart beat interval.</param>
+            <param name="msgSeqNoRx">The MSG seq no rx.</param>
+            <param name="msgSeqNoTx">The MSG seq no tx.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Maple.FixSession.Connection.manageConnection(Maple.FixSession.SocketConnectedDelegate,Maple.FixSession.ProcessMessageDelegate)">
+            <summary>
+            Manages the connection.
+            </summary>
+            <param name="socketConnected">The socket connected.</param>
+            <param name="processMessage">The process message.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.extractMessage(System.Text.StringBuilder)">
+            <summary>
+            Extracts the message.
+            </summary>
+            <param name="dataBuffer">The data buffer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixSession.Connection.getData(System.Text.StringBuilder,System.String@,System.String@,System.Text.StringBuilder,System.Char)">
+            <summary>
+            Gets the data.
+            </summary>
+            <param name="contentSB">The content SB.</param>
+            <param name="tag">The tag.</param>
+            <param name="data">The data.</param>
+            <param name="nonParsedContentSB">The non parsed content SB.</param>
+            <param name="delimiter">The delimiter.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.validFixMessage(Maple.FixMessage.Message,System.Boolean@)">
+            <summary>
+            Valids the fix message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="resendRequested">if set to <c>true</c> [resend requested].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixSession.Connection.adminMessage(Maple.FixMessage.Message)">
+            <summary>
+            Admins the message.
+            </summary>
+            <param name="message">The message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixSession.Connection.buildMessage(System.String,System.String,System.String,System.Int64,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Builds the message.
+            </summary>
+            <param name="msgType">Type of the MSG.</param>
+            <param name="senderCompID">The sender comp ID.</param>
+            <param name="targetCompID">The target comp ID.</param>
+            <param name="msgSeqNum">The MSG seq num.</param>
+            <param name="data">The data.</param>
+            <param name="possDup">if set to <c>true</c> [poss dup].</param>
+            <param name="possResend">if set to <c>true</c> [poss resend].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixSession.Connection.rebuildMessageForResend(System.String)">
+            <summary>
+            Rebuilds the message for resend.
+            </summary>
+            <param name="message">The message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixSession.Connection.processAdminMessage(Maple.FixMessage.Message)">
+            <summary>
+            Processes the admin message.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.logon">
+            <summary>
+            Logons this instance.
+            </summary>
+        </member>
+        <member name="M:Maple.FixSession.Connection.logon(System.Boolean)">
+            <summary>
+            Logons the specified reset seq num flag.
+            </summary>
+            <param name="resetSeqNumFlag">if set to <c>true</c> [reset seq num flag].</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.logout(System.String)">
+            <summary>
+            Logouts the specified reason for logout.
+            </summary>
+            <param name="reasonForLogout">The reason for logout.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.heartBeat(System.String)">
+            <summary>
+            Hearts the beat.
+            </summary>
+            <param name="testReqID">The test req ID.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.testRequest(System.String)">
+            <summary>
+            Tests the request.
+            </summary>
+            <param name="testRequestID">The test request ID.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.rejectMessage(System.Int64,System.String,System.String)">
+            <summary>
+            Rejects the message.
+            </summary>
+            <param name="msgSeqNum">The MSG seq num.</param>
+            <param name="reasonCode">The reason code.</param>
+            <param name="reason">The reason.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.sequenceReset(System.String,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            Sequences the reset.
+            </summary>
+            <param name="gapFillFlag">The gap fill flag.</param>
+            <param name="gapFillSeqNo">The gap fill seq no.</param>
+            <param name="newSeqNo">The new seq no.</param>
+            <param name="possDup">if set to <c>true</c> [poss dup].</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.resendRequest(System.Int64,System.Int64)">
+            <summary>
+            Resends the request.
+            </summary>
+            <param name="beginSeqNo">The begin seq no.</param>
+            <param name="endSeqNo">The end seq no.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.send(System.String,System.Int64,System.Boolean)">
+            <summary>
+            Sends the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="msgSeqNum">The MSG seq num.</param>
+            <param name="resetHeartBeat">if set to <c>true</c> [reset heart beat].</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.doGapFill(System.String)">
+            <summary>
+            Does the gap fill.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixSession.Connection.doHeartBeatTx">
+            <summary>
+            Does the heart beat tx.
+            </summary>
+        </member>
+        <member name="M:Maple.FixSession.Connection.pHeartBeatTx_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Handles the Elapsed event of the pHeartBeatTx control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Timers.ElapsedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.doHeartBeatRx">
+            <summary>
+            Does the heart beat rx.
+            </summary>
+        </member>
+        <member name="M:Maple.FixSession.Connection.pHeartBeatRx_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Handles the Elapsed event of the pHeartBeatRx control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Timers.ElapsedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.resetHeartBeats">
+            <summary>
+            Resets the heart beats.
+            </summary>
+        </member>
+        <member name="M:Maple.FixSession.Connection.resetHeartBeatTx">
+            <summary>
+            Resets the heart beat tx.
+            </summary>
+        </member>
+        <member name="M:Maple.FixSession.Connection.resetHeartBeatRx">
+            <summary>
+            Resets the heart beat rx.
+            </summary>
+        </member>
+        <member name="M:Maple.FixSession.Connection.disableHeartBeats">
+            <summary>
+            Disables the heart beats.
+            </summary>
+        </member>
+        <member name="M:Maple.FixSession.Connection.forceResendRequest(System.Int64,System.Int64)">
+            <summary>
+            Forces the resend request.
+            </summary>
+            <param name="beginSeqNum">The begin seq num.</param>
+            <param name="endSeqNum">The end seq num.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.loggedIn">
+            <summary>
+            Loggeds the in.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FixSession.Connection.initiateLoginWithSeqNumReset">
+            <summary>
+            Initiates the login with seq num reset.
+            </summary>
+        </member>
+        <member name="M:Maple.FixSession.Connection.queueApplicationDataForOutbound(System.String)">
+            <summary>
+            Queues the application data for outbound.
+            </summary>
+            <param name="applicationData">The application data.</param>
+        </member>
+        <member name="M:Maple.FixSession.Connection.sendApplicationMessage(System.String)">
+            <summary>
+            Sends the application message.
+            </summary>
+            <param name="applicationData">The application data.</param>
+        </member>
+        <member name="T:Maple.FTP.FTP">
+            <summary>
+            Downloads files from an FTP site
+            </summary>
+        </member>
+        <member name="M:Maple.FTP.FTP.Download(System.String,System.String,System.String,System.String)">
+            <summary>
+            Download a file from an FTP site, defaulting to text transfer.
+            </summary>
+            <param name="uriString">The URI that identifies the Internet resource.</param>
+            <param name="userName">The username used to login to the FTP site.</param>
+            <param name="password">The password for the username provided to login to the FTP site.</param>
+            <param name="localPathName">The local path, including filename, to download to.</param>
+        </member>
+        <member name="M:Maple.FTP.FTP.Download(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Download a file from an FTP site.
+            </summary>
+            <param name="uriString">The URI that identifies the Internet resource. e.g. ftp://ftp.efg.barcap.com/in/MyFile.txt</param>
+            <param name="userName">The username used to login to the FTP site.</param>
+            <param name="password">The password for the username provided to login to the FTP site.</param>
+            <param name="localPathName">The local path, including filename, to download to.</param>
+            <param name="useBinary">Determines whether to use binary transfer method or not.</param>
+        </member>
+        <member name="T:Maple.FTP.FileDetail">
+            <summary>
+            File class
+            </summary>
+        </member>
+        <member name="M:Maple.FTP.FileDetail.#ctor(System.String,System.Int32,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.FTP.FileDetail"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="size">The size.</param>
+            <param name="timeStamp">The time stamp.</param>
+        </member>
+        <member name="P:Maple.FTP.FileDetail.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Maple.FTP.FileDetail.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+            <value>
+            The size.
+            </value>
+        </member>
+        <member name="P:Maple.FTP.FileDetail.Timestamp">
+            <summary>
+            Gets or sets the timestamp.
+            </summary>
+            <value>
+            The timestamp.
+            </value>
+        </member>
+        <member name="T:Maple.FTP.SFTP">
+            <summary>
+            SFTP functionality
+            </summary>
+        </member>
+        <member name="M:Maple.FTP.SFTP.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.FTP.SFTP"/> class.
+            </summary>
+        </member>
+        <member name="M:Maple.FTP.SFTP.GetSFtpFileList(System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets the SFTP server file list.
+            </summary>
+            <param name="Site">The site.</param>
+            <param name="Dir">The dir.</param>
+            <param name="User">The user.</param>
+            <param name="Pw">The pw.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FTP.SFTP.SFtpPut(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Puts files on the SFTP server
+            </summary>
+            <param name="Filename">The filename.</param>
+            <param name="Site">The site.</param>
+            <param name="DestDir">The dest dir.</param>
+            <param name="User">The user.</param>
+            <param name="Pw">The pw.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FTP.SFTP.SFtpGet(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            Gets the file from the SFTP server
+            </summary>
+            <param name="GetFilenames">The get filenames.</param>
+            <param name="Site">The site.</param>
+            <param name="SourceDir">The source dir.</param>
+            <param name="User">The user.</param>
+            <param name="Pw">The pw.</param>
+            <param name="Session">The session.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.FTP.SFTP.DeleteSFtpFiles(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String)">
+            <summary>
+            Deletes file from the SFTP server
+            </summary>
+            <param name="Filenames">The filenames.</param>
+            <param name="Site">The site.</param>
+            <param name="Folder">The folder.</param>
+            <param name="User">The user.</param>
+            <param name="Pw">The pw.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.GeneralUtils.GeneralFunctions">
+            <summary>
+            General function not specifically for use by any particular program
+            </summary>
+        </member>
+        <member name="M:Maple.GeneralUtils.GeneralFunctions.GetRegValue(System.Boolean,System.Windows.Forms.Form,System.String,System.String)">
+            <summary>
+            Get a setting which relates to the application that calls it
+            </summary>
+            <param name="User"></param>
+            <param name="Key"></param>
+            <param name="Default"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.GeneralUtils.GeneralFunctions.GetRegValue(System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            Get a setting from the registry
+            </summary>
+            <param name="User"></param>
+            <param name="Key"></param>
+            <param name="Default"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.GeneralUtils.GeneralFunctions.SaveWindowPosition(System.Windows.Forms.Form)">
+            <summary>
+            Save the size and position of the window
+            </summary>
+            <param name="frm"></param>
+            <param name="App"></param>
+        </member>
+        <member name="M:Maple.GeneralUtils.GeneralFunctions.RestoreWindowPosition(System.Windows.Forms.Form)">
+            <summary>
+            Restore the size and position of the window to that when it was last saved
+            </summary>
+            <param name="frm"></param>
+        </member>
+        <member name="M:Maple.GeneralUtils.GeneralFunctions.SetComboBoxViaText(System.Windows.Forms.ComboBox,System.String)">
+            <summary>
+            Sets the currently selected item in a comboBox via the text associated with the items in the combo box list
+            </summary>
+            <param name="comboBox">The comboBox that is being set</param>
+            <param name="itemText">The text of the item shown in the combox list of items to set to</param>
+            <returns>Successfully found and set item</returns>
+        </member>
+        <member name="M:Maple.GeneralUtils.GeneralFunctions.SetComboBoxViaDataViewProperty(System.Windows.Forms.ComboBox,System.String,System.Object)">
+            <summary>
+            Sets the currently selected item in a comboBox (that has a dataSource of type DataView) via a particular property of that item in the combo box list
+            </summary>
+            <param name="comboBox">The comboBox that is being set</param>
+            <param name="propertyName">The name of the dataViewRow property to search</param>
+            <param name="propertyValue">The value of the dataViewRow property to set to</param>
+            <returns>Successfully found and set item</returns>
+        </member>
+        <member name="T:Maple.AboutBox">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Maple.AboutBox.#ctor(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.AboutBox"/> class.
+            </summary>
+            <param name="connectionInfo">The connection info.</param>
+        </member>
+        <member name="F:Maple.AboutBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Maple.AboutBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Maple.AboutBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Maple.AboutBox.AssemblyTitle">
+            <summary>
+            Gets the assembly title.
+            </summary>
+        </member>
+        <member name="P:Maple.AboutBox.AssemblyVersion">
+            <summary>
+            Gets the assembly version.
+            </summary>
+        </member>
+        <member name="P:Maple.AboutBox.AssemblyDescription">
+            <summary>
+            Gets the assembly description.
+            </summary>
+        </member>
+        <member name="P:Maple.AboutBox.AssemblyProduct">
+            <summary>
+            Gets the assembly product.
+            </summary>
+        </member>
+        <member name="P:Maple.AboutBox.AssemblyCopyright">
+            <summary>
+            Gets the assembly copyright.
+            </summary>
+        </member>
+        <member name="P:Maple.AboutBox.AssemblyCompany">
+            <summary>
+            Gets the assembly company.
+            </summary>
+        </member>
+        <member name="T:Maple.HelpAbout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Maple.HelpAbout.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.HelpAbout"/> class.
+            </summary>
+        </member>
+        <member name="M:Maple.HelpAbout.ShowDialog(System.Windows.Forms.IWin32Window,System.String[])">
+            <summary>
+            Shows the dialog.
+            </summary>
+            <param name="parent">The parent.</param>
+            <param name="dsnName">Name of the DSN.</param>
+        </member>
+        <member name="M:Maple.HelpAbout.CheckDatabase(System.String[])">
+            <summary>
+            Checks the database.
+            </summary>
+            <param name="dsnName">Name of the DSN.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.Holidays">
+            <summary>
+            Public holidays that affect Maple Securities UK (currently stored in KondorUK)
+            </summary>
+        </member>
+        <member name="M:Maple.Holidays.#ctor">
+            <summary>
+            Holidays with default settings
+            </summary>
+        </member>
+        <member name="M:Maple.Holidays.#ctor(System.Boolean)">
+            <summary>
+            Holidays with default reminder email address
+            </summary>
+            <param name="reminderRequired">Whether or not an email reminder is sent out when there are not many holidays left</param>
+        </member>
+        <member name="M:Maple.Holidays.#ctor(System.Boolean,System.String)">
+            <summary>
+            Holidays with no defaults
+            </summary>
+            <param name="reminderRequired">Whether or not an email reminder is sent out when there are not many holidays left</param>
+            <param name="reminderEmailAddress">The email address to send any reminders to</param>
+        </member>
+        <member name="M:Maple.Holidays.PublicHolidaysByCountry(System.String)">
+            <summary>
+            All the public holidays for the specified country
+            </summary>
+            <param name="Country">The country.</param>
+            <returns>
+            A list of holidays for the specified country
+            </returns>
+        </member>
+        <member name="M:Maple.Holidays.AllPublicHolidays">
+            <summary>
+            All public holidays for all countries stored in the system
+            </summary>
+            <returns>
+            A list of public holidays per country
+            </returns>
+        </member>
+        <member name="M:Maple.Holidays.ReportHolidays(System.DateTime,System.String)">
+            <summary>
+            This method will remind people to add new holidays to the database
+            </summary>
+            <param name="lastHoliday">The last holiday.</param>
+            <param name="holidayCentre">The holiday centre.</param>
+            <returns>
+            Whether the report was successful
+            </returns>
+        </member>
+        <member name="M:Maple.Holidays.GetHolidayCentres">
+            <summary>
+            Gets the holiday centres.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Maple.Holidays.ReminderEmailAddr">
+            <summary>
+            Gets or sets the reminder email addr.
+            </summary>
+            <value>
+            The reminder email addr.
+            </value>
+        </member>
+        <member name="P:Maple.Holidays.ReminderRequired">
+            <summary>
+            Gets or sets the holiday reminder. True means that an email will be sent whenever holidays need updating in the DB (default is true).
+            </summary>
+            <value>
+              <c>true</c> if [reminder required]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Maple.SqlHolidays">
+            <summary>
+            The sql part of the Holidays
+            </summary>
+        </member>
+        <member name="M:Maple.SqlHolidays.#ctor">
+            <summary>
+            Setup the connection using specified DSN.
+            </summary>
+        </member>
+        <member name="M:Maple.SqlHolidays.Finalize">
+            <summary>
+            Releases unmanaged resources and performs other cleanup operations before the
+            <see cref="T:Maple.SqlHolidays"/> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:Maple.SqlHolidays.Close">
+            <summary>
+            Close the database connection explicitly instead of waiting for garbage collection.
+            </summary>
+        </member>
+        <member name="M:Maple.SqlHolidays.GetHolidays(System.String,System.DateTime@)">
+            <summary>
+            Retrieve a list of holidays for the specified country
+            </summary>
+            <param name="HolidayCentre">The holiday centre required</param>
+            <param name="LastHolidayDate">The last holiday date.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SqlHolidays.GetAllHolidays(System.Collections.Generic.Dictionary{System.String,System.DateTime})">
+            <summary>
+            Retrieves all the holidays for each country in the database
+            </summary>
+            <param name="LastCountryHolidays">The last holiday date for each country</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SqlHolidays.GetHolidayCentres">
+            <summary>
+            Get a list of all the holiday centres in the db
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SqlHolidays.System#IDisposable#Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:Maple.Logger">
+            <summary>
+            Provides logging functionality
+            Puts the log files into a directory named LOGS
+            The log file is rolled each day
+            </summary>
+        </member>
+        <member name="M:Maple.Logger.GetLogFilePathAndName(System.Boolean)">
+            <summary>
+            Gets the log file path and name.
+            </summary>
+            <returns>
+            The path and name of the log file
+            </returns>
+        </member>
+        <member name="M:Maple.Logger.Log(System.String)">
+            <summary>
+            Logs the specified entry text to a log file.
+            </summary>
+            <param name="entry">The entry text.</param>
+        </member>
+        <member name="M:Maple.Logger.ViewLog">
+            <summary>
+            Views the current log file in the Notepad.
+            </summary>
+        </member>
+        <member name="M:Maple.Logger.ViewLogFolder">
+            <summary>
+            Views the log folder in explorer.
+            </summary>
+        </member>
+        <member name="M:Maple.Logger.IndentLog">
+            <summary>
+            Indents the log text by 4 spaces.
+            </summary>
+        </member>
+        <member name="M:Maple.Logger.UnindentLog">
+            <summary>
+            Unindents the log text by 4 spaces.
+            </summary>
+        </member>
+        <member name="T:Maple.Logon">
+            <summary>
+            Splash Screen and Application Access Right Checks
+            </summary>
+        </member>
+        <member name="M:Maple.Logon.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a logon splash screen and performs access checks using NT username
+            </summary>
+            <param name="AppName">The name of the current application</param>
+            <param name="Version">The application version</param>
+            <param name="SecurityRequired">Choose whether to have security on or off. (i.e. db checks)</param>
+        </member>
+        <member name="M:Maple.Logon.Close">
+            <summary>
+            Close the splash screen
+            </summary>
+        </member>
+        <member name="M:Maple.Logon.kill">
+            <summary>
+            Kills this instance.
+            </summary>
+        </member>
+        <member name="M:Maple.Logon.getNTusername">
+            <summary>
+            Gets the NT username.
+            </summary>
+        </member>
+        <member name="M:Maple.Logon.queryDB">
+            <summary>
+            Queries the DB.
+            </summary>
+        </member>
+        <member name="M:Maple.Logon.CheckAccess">
+            <summary>
+            Check if access has been given to this application
+            </summary>
+            <returns>
+            Access rights
+            </returns>
+        </member>
+        <member name="M:Maple.Logon.SetSplash(System.String)">
+            <summary>
+            Set the current status of the application
+            </summary>
+            <param name="status">Text to display on splash screen</param>
+        </member>
+        <member name="M:Maple.Logon.Wait(System.Int32)">
+            <summary>
+            Halts the app so that the user has enough time to see the splash screen.
+            </summary>
+            <param name="Milliseconds">The milliseconds.</param>
+        </member>
+        <member name="T:Maple.Logon.eAppAccess">
+            <summary>
+            Type of access rights available
+            </summary>
+        </member>
+        <member name="F:Maple.Logon.eAppAccess.eNone">
+            <summary>
+            No access rights
+            </summary>
+        </member>
+        <member name="F:Maple.Logon.eAppAccess.eRead">
+            <summary>
+            Read-Only access rights
+            </summary>
+        </member>
+        <member name="F:Maple.Logon.eAppAccess.eReadWrite">
+            <summary>
+            Full access rights
+            </summary>
+        </member>
+        <member name="T:Maple.SplashFrm">
+            <summary>
+            Displays the logon spash form
+            </summary>
+        </member>
+        <member name="M:Maple.SplashFrm.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.SplashFrm"/> class.
+            </summary>
+            <param name="statusVal">The status val.</param>
+            <param name="appVal">The app val.</param>
+            <param name="versionVal">The version val.</param>
+        </member>
+        <member name="M:Maple.SplashFrm.SplashFrm_Load(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Load event of the SplashFrm control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.SplashFrm.Init">
+            <summary>
+            Inits this instance.
+            </summary>
+        </member>
+        <member name="M:Maple.SplashFrm.SetStatusText(System.String)">
+            <summary>
+            Sets the status text.
+            </summary>
+            <param name="status">The status.</param>
+        </member>
+        <member name="M:Maple.SplashFrm.CloseSplash">
+            <summary>
+            Closes the splash.
+            </summary>
+        </member>
+        <member name="M:Maple.SplashFrm.SetProps(System.String,System.String,System.String)">
+            <summary>
+            Sets the props.
+            </summary>
+            <param name="valStatus">The val status.</param>
+            <param name="valApp">The val app.</param>
+            <param name="valVersion">The val version.</param>
+        </member>
+        <member name="M:Maple.SplashFrm.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Maple.SplashFrm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Maple.SplashFrm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Maple.SplashFrm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Maple.LogonProcs">
+            <summary>
+            Handles the logon sql
+            </summary>
+        </member>
+        <member name="M:Maple.LogonProcs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.LogonProcs"/> class.
+            </summary>
+        </member>
+        <member name="M:Maple.LogonProcs.Close">
+            <summary>
+            Closes this instance.
+            </summary>
+        </member>
+        <member name="M:Maple.LogonProcs.AppAccess(System.String,System.String,System.String@)">
+            <summary>
+            Apps the access.
+            </summary>
+            <param name="Uname">The uname.</param>
+            <param name="App">The app.</param>
+            <param name="Result">The result.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.LogonProcs.GetDBSettings(System.String@,System.String@)">
+            <summary>
+            Gets the DB settings.
+            </summary>
+            <param name="ServerName">Name of the server.</param>
+            <param name="DbName">Name of the db.</param>
+        </member>
+        <member name="M:Maple.LogonProcs.Decrypt(System.String)">
+            <summary>
+            Opposite of Encrypt function.
+            </summary>
+            <param name="Data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.LogonProcs.Encrypt(System.String)">
+            <summary>
+            Encrypts the specified data.
+            </summary>
+            <param name="Data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Managers.ApplicationManager.StartApplication(System.String,System.String)">
+            <summary>
+            Entry point for all application starter requests.  
+            </summary>
+            <param name="applicationName"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Maple.Managers.ApplicationManager.Applications">
+            <summary>
+            Applications configured to run remotely
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Maple.Maple.CleanXMLText(System.String)" -->
+        <member name="M:Maple.Maple.GetMailServerName">
+            <summary>
+            Retrieves the name of the mail server from a central location
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.Notifier">
+            <summary>
+            Used to log messages and errors to a variety of destinations
+            </summary>
+        </member>
+        <member name="M:Maple.Notifier.DUOC(System.String,System.String)">
+            <summary>
+            Send an email message to DevUserOnCall
+            </summary>
+            <param name="Subject">The subject line of the email</param>
+            <param name="Body">The body of the email.</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(System.String)">
+            <summary>
+            Logs the specified message.
+            </summary>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(Maple.Notifier.NotifyDestination,Maple.Notifier.SeverityLevel,System.String)">
+            <summary>
+            Logs the specified message.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="severity">The severity.</param>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(Maple.Notifier.NotifyDestination,Maple.Notifier.SeverityLevel,System.String,System.String,System.String)">
+            <summary>
+            Logs the specified message.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="severity">The severity.</param>
+            <param name="message">The message to log.</param>
+            <param name="emailTo">The email address to send to.</param>
+            <param name="subject">The email subject.</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(Maple.Notifier.NotifyDestination,Maple.Notifier.SeverityLevel,System.String,System.String)">
+            <summary>
+            Logs the specified message.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="severity">The severity.</param>
+            <param name="message">The message to log.</param>
+            <param name="caption">The message box caption.</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(Maple.Notifier.NotifyDestination,Maple.Notifier.SeverityLevel,System.String,System.String,System.String,System.String)">
+            <summary>
+            Logs the specified message.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="severity">The severity.</param>
+            <param name="message">The message to log.</param>
+            <param name="caption">The message box caption.</param>
+            <param name="emailTo">The email address to send to.</param>
+            <param name="subject">The email subject.</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(System.Exception)">
+            <summary>
+            Logs the specified exception.
+            </summary>
+            <param name="ex">The exception to log</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(Maple.Notifier.NotifyDestination,System.Exception)">
+            <summary>
+            Logs the specified exception.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="ex">The exception to log</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(Maple.Notifier.NotifyDestination,Maple.Notifier.SeverityLevel,System.Exception)">
+            <summary>
+            Logs the specified exception.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="severity">The severity.</param>
+            <param name="ex">The exception to log</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(Maple.Notifier.NotifyDestination,Maple.Notifier.SeverityLevel,System.Exception,System.String,System.String)">
+            <summary>
+            Logs the specified exception.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="severity">The severity.</param>
+            <param name="ex">The exception to log</param>
+            <param name="emailTo">The email address to send to.</param>
+            <param name="subject">The email subject.</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(Maple.Notifier.NotifyDestination,Maple.Notifier.SeverityLevel,System.Exception,System.String)">
+            <summary>
+            Logs the specified exception.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="severity">The severity.</param>
+            <param name="ex">The exception to log</param>
+            <param name="caption">The message box caption.</param>
+        </member>
+        <member name="M:Maple.Notifier.Notify(Maple.Notifier.NotifyDestination,Maple.Notifier.SeverityLevel,System.Exception,System.String,System.String,System.String)">
+            <summary>
+            Logs the specified exception.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="severity">The severity.</param>
+            <param name="ex">The exception to log</param>
+            <param name="caption">The message box caption.</param>
+            <param name="emailTo">The email address to send to.</param>
+            <param name="subject">The email subject.</param>
+        </member>
+        <member name="M:Maple.Notifier.SendNotification(Maple.Notifier.NotifyDestination,Maple.Notifier.SeverityLevel,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends the notification message.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="severity">The severity.</param>
+            <param name="message">The message to log.</param>
+            <param name="caption">The message box caption.</param>
+            <param name="emailTo">The email address to send to.</param>
+            <param name="subject">The email subject.</param>
+        </member>
+        <member name="M:Maple.Notifier.SendNotification(Maple.Notifier.NotifyDestination,Maple.Notifier.SeverityLevel,System.Exception,System.String,System.String,System.String)">
+            <summary>
+            Sends the notification exception.
+            </summary>
+            <param name="destination">The log destination.</param>
+            <param name="severity">The severity.</param>
+            <param name="ex">The exception to log</param>
+            <param name="caption">The message box caption.</param>
+            <param name="emailTo">The email address to send to.</param>
+            <param name="subject">The email subject.</param>
+        </member>
+        <member name="M:Maple.Notifier.SendToEventLog(System.String)">
+            <summary>
+            Sends to event log.
+            </summary>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:Maple.Notifier.SendToEmail(System.String,System.String,System.String)">
+            <summary>
+            Sends to email.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="emailTo">The email address to send to.</param>
+            <param name="subject">The email subject.</param>
+        </member>
+        <member name="M:Maple.Notifier.SendToFile(System.String,System.String,Maple.Notifier.SeverityLevel)">
+            <summary>
+            Sends to file location in the same directory as the calling application.
+            </summary>
+            <param name="stack">The stack.</param>
+            <param name="message">The message to log.</param>
+            <param name="severity">The severity.</param>
+        </member>
+        <member name="M:Maple.Notifier.SendToDatabase(System.String,System.String,System.String,System.String,System.String,Maple.Notifier.SeverityLevel)">
+            <summary>
+            Sends to database.
+            </summary>
+            <param name="Subject">The subject.</param>
+            <param name="App">The app.</param>
+            <param name="Method">The method.</param>
+            <param name="message">The message to log.</param>
+            <param name="stack">The stack.</param>
+            <param name="severity">The severity.</param>
+        </member>
+        <member name="M:Maple.Notifier.SendToMessageBox(System.String,System.String,System.Boolean)">
+            <summary>
+            Sends to message box.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="caption">The message box caption.</param>
+            <param name="isError">if set to <c>true</c> [is error].</param>
+        </member>
+        <member name="M:Maple.Notifier.GetExceptionStacks(System.Exception)">
+            <summary>
+            Gets The exception to log stacks.
+            </summary>
+            <param name="ex">The exception to log</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Notifier.GetExceptionMessages(System.Exception)">
+            <summary>
+            Gets The exception message and all inner exception messages.
+            </summary>
+            <param name="ex">The exception to log</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Notifier.GetExceptionMessagesHTML(System.Exception)">
+            <summary>
+            Gets The exception message and all inner exception messages.
+            </summary>
+            <param name="ex">The exception to log</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Notifier.FormatEmail(System.Exception,Maple.Notifier.SeverityLevel)">
+            <summary>
+            Formats The exception to log for email.
+            </summary>
+            <param name="ex">The exception to log</param>
+            <param name="severity">The severity.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Notifier.GetCustomAttributesHtml(System.Exception)">
+            <summary>
+            Retrieve custom attributes from exception.
+            </summary>
+            <param name="ex">The ex.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Notifier.FormatEmail(System.String)">
+            <summary>
+            Formats the message for email.
+            </summary>
+            <param name="message">The message to log.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Notifier.FormatMsgBox(System.Exception,Maple.Notifier.SeverityLevel)">
+            <summary>
+            Formats The exception to log for message box.
+            </summary>
+            <param name="ex">The exception to log</param>
+            <param name="severity">The severity.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Notifier.FormatMsgBox(System.String)">
+            <summary>
+            Formats the message for message box.
+            </summary>
+            <param name="message">The message to log.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Notifier.ApplicationName">
+            <summary>
+            Returns the application name.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.Notifier.NotifyDestination">
+            <summary>
+            Enumeration describing the various log destinations
+            </summary>
+        </member>
+        <member name="F:Maple.Notifier.NotifyDestination.Email">
+            <summary>
+            Log via email
+            </summary>
+        </member>
+        <member name="F:Maple.Notifier.NotifyDestination.Database">
+            <summary>
+            Log via database
+            </summary>
+        </member>
+        <member name="F:Maple.Notifier.NotifyDestination.MessageBox">
+            <summary>
+            Log via messagebox
+            </summary>
+        </member>
+        <member name="F:Maple.Notifier.NotifyDestination.File">
+            <summary>
+            Log via file
+            </summary>
+        </member>
+        <member name="F:Maple.Notifier.NotifyDestination.EventLog">
+            <summary>
+            Log via event log
+            </summary>
+        </member>
+        <member name="T:Maple.Notifier.SeverityLevel">
+            <summary>
+            Severity of the message
+            </summary>
+        </member>
+        <member name="T:Maple.Office.Excel.ExcelUtils">
+            <summary>
+            A class of general purpose Excel utilities
+            </summary>
+        </member>
+        <member name="F:Maple.Office.Excel.ExcelUtils.XMLStart">
+            <summary>
+            XML definition for an excel file
+            </summary>
+        </member>
+        <member name="M:Maple.Office.Excel.ExcelUtils.ExportCsv(System.String[],System.String[],System.String,System.Boolean)">
+            <summary>
+            Imports an existing csv file into Excel and optionally saves it as a workbook with a unique filename
+            </summary>
+            <param name="Filename">Path and name of csv file</param>
+            <param name="SaveAsUniqueName">Whether to re-save the file as a workbook</param>
+        </member>
+        <member name="M:Maple.Office.Excel.ExcelUtils.ExportDataToExcel(System.Data.DataSet,System.String)">
+            <summary>
+            Exports the dataset to Excel.
+            Each table in the dataset is created on an individual sheet.
+            </summary>
+            <param name="source">The source dataset.</param>
+            <param name="fileName">Name of the Excel file to create.</param>
+        </member>
+        <member name="M:Maple.Office.Excel.ExcelUtils.ExportDataToExcel(System.Data.DataTable,System.String)">
+            <summary>
+            Exports the datatable to Excel.
+            </summary>
+            <param name="source">The source datatable.</param>
+            <param name="fileName">Name of the Excel file to create.</param>
+        </member>
+        <member name="M:Maple.Office.Excel.ExcelUtils.CreateSheet(System.Data.DataTable,System.IO.StreamWriter,System.String)">
+            <summary>
+            Creates the Excel sheet based on the datatable - used by the ExportDataToExel methods.
+            </summary>
+            <param name="sourceTable">The source datatable.</param>
+            <param name="excelDoc">The streamwriter.</param>
+            <param name="SheetName">Name of the sheet to create.</param>
+        </member>
+        <member name="M:Maple.Office.Excel.ExcelUtils.CreateSheet(System.String,System.IO.StreamWriter,System.String)">
+            <summary>
+            Creates the Excel sheet based on the datatable - used by the ExportDataToExel methods.
+            </summary>
+            <param name="sourceTable">The source datatable.</param>
+            <param name="excelDoc">The streamwriter.</param>
+            <param name="SheetName">Name of the sheet to create.</param>
+        </member>
+        <member name="T:Maple.Properties.Resource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Maple.Properties.Resource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Maple.Properties.Resource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Maple.PubSubClient.eStatus">
+            <summary>
+            Status of the Client
+            </summary>
+        </member>
+        <member name="T:Maple.PubSubClient.eCallType">
+            <summary>
+            Client Call Type
+            </summary>
+        </member>
+        <member name="T:Maple.PubSubClient.Client">
+            <summary>
+            The Client
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.log(System.String)">
+            <summary>
+            Logs the specified data.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.PubSubClient.Client"/> class.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.pFIX_statusChange(Maple.FixApplication.eStatus,System.String)">
+            <summary>
+            Ps the FI x_status change.
+            </summary>
+            <param name="status">The status.</param>
+            <param name="feedback">The feedback.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.connect(Maple.PubSubClient.eCallType)">
+            <summary>
+            Connects this instance.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.connect(System.String)">
+            <summary>
+            Connects the specified remote host.
+            </summary>
+            <param name="remoteHost">The remote host.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.connect(System.String,System.Int32)">
+            <summary>
+            Connects the specified remote host.
+            </summary>
+            <param name="remoteHost">The remote host.</param>
+            <param name="timeoutMilliseconds">The timeout milliseconds.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.connect(System.String,System.Int32,System.Int32)">
+            <summary>
+            Connects the specified remote host.
+            </summary>
+            <param name="remoteHost">The remote host.</param>
+            <param name="remotePort">The remote port.</param>
+            <param name="timeoutMilliseconds">The timeout milliseconds.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.disconnect">
+            <summary>
+            Disconnects this instance.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.disconnect(System.Int32)">
+            <summary>
+            Disconnects the specified timeout milliseconds.
+            </summary>
+            <param name="timeoutMilliseconds">The timeout milliseconds.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.pTimer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Handles the Elapsed event of the pTimer control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Timers.ElapsedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.pTimerSynchronousCall_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Handles the Elapsed event of the pTimerSynchronousCall control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Timers.ElapsedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.pFIX_nonFixMessage(Maple.FixMessage.Message,Maple.FixApplication.Application)">
+            <summary>
+            Ps the FI x_non fix message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="fix">The fix.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.getData(System.Text.StringBuilder,System.String@,System.String@,System.Text.StringBuilder,System.Char)">
+            <summary>
+            Gets the data.
+            </summary>
+            <param name="contentSB">The content SB.</param>
+            <param name="tag">The tag.</param>
+            <param name="data">The data.</param>
+            <param name="nonParsedContentSB">The non parsed content SB.</param>
+            <param name="delimiter">The delimiter.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.getTick(System.String@,System.Object@,System.Int64@)">
+            <summary>
+            Gets the tick.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <param name="id">The id.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.tickQueueCount">
+            <summary>
+            Ticks the queue count.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.outboundQueueCount">
+            <summary>
+            Outbounds the queue count.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.getChildren(System.String)">
+            <summary>
+            Gets the children.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.getChildren(System.String,System.Int32)">
+            <summary>
+            Gets the children.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="timeOutMilliseconds">The time out milliseconds.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.subscribe(System.String,Maple.PubSubClient.eCallType)">
+            <summary>
+            Subscribes the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="callType">Type of the call.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.subscribe(System.String,System.Int32)">
+            <summary>
+            Subscribes the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="timeOutMilliseconds">The time out milliseconds.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.unSubscribe(System.String,Maple.PubSubClient.eCallType)">
+            <summary>
+            Uns the subscribe.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="callType">Type of the call.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.unSubscribe(System.String,System.Int32)">
+            <summary>
+            Uns the subscribe.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="timeOutMilliseconds">The time out milliseconds.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.publish(System.String,System.Object,Maple.PubSubClient.eCallType)">
+            <summary>
+            Publishes the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <param name="callType">Type of the call.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.publish(System.String,System.Object,System.Int32)">
+            <summary>
+            Publishes the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <param name="timeOutMilliseconds">The time out milliseconds.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.publish(System.Int64,System.Object,Maple.PubSubClient.eCallType)">
+            <summary>
+            Publishes the specified id.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="value">The value.</param>
+            <param name="callType">Type of the call.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.publish(System.Int64,System.Object,System.Int32)">
+            <summary>
+            Publishes the specified id.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="value">The value.</param>
+            <param name="timeOutMilliseconds">The time out milliseconds.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.delete(System.String,Maple.PubSubClient.eCallType)">
+            <summary>
+            Deletes the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="callType">Type of the call.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.delete(System.String,System.Int32)">
+            <summary>
+            Deletes the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="timeOutMilliseconds">The time out milliseconds.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.deleteChildren(System.String,Maple.PubSubClient.eCallType)">
+            <summary>
+            Deletes the children.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="callType">Type of the call.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.deleteChildren(System.String,System.Int32)">
+            <summary>
+            Deletes the children.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="timeOutMilliseconds">The time out milliseconds.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.processData(Maple.PubSubProtocol.eDataType,System.Int64,System.String,System.Object,System.Int32,Maple.PubSubClient.eCallType)">
+            <summary>
+            Processes the data.
+            </summary>
+            <param name="dataType">Type of the data.</param>
+            <param name="id">The id.</param>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <param name="timeOutMilliseconds">The time out milliseconds.</param>
+            <param name="callType">Type of the call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.checkConnection">
+            <summary>
+            Checks the connection.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubClient.Client.queuePubSubDataForOutboundViaFix(Maple.PubSubProtocol.Data)">
+            <summary>
+            Queues the pub sub data for outbound via fix.
+            </summary>
+            <param name="pubSubData">The pub sub data.</param>
+        </member>
+        <member name="P:Maple.PubSubClient.Client.status">
+            <summary>
+            Gets the status.
+            </summary>
+        </member>
+        <member name="P:Maple.PubSubClient.Client.remoteHost">
+            <summary>
+            Gets the remote host.
+            </summary>
+        </member>
+        <member name="P:Maple.PubSubClient.Client.remotePort">
+            <summary>
+            Gets the remote port.
+            </summary>
+        </member>
+        <member name="E:Maple.PubSubClient.Client.tick">
+            <summary>
+            Occurs when [tick].
+            </summary>
+        </member>
+        <member name="E:Maple.PubSubClient.Client.statusChange">
+            <summary>
+            Occurs when [status change].
+            </summary>
+        </member>
+        <member name="E:Maple.PubSubClient.Client.bufferedOutboundMessage">
+            <summary>
+            Occurs when [buffered outbound message].
+            </summary>
+        </member>
+        <member name="T:Maple.PubSubClient.DefaultClient">
+            <summary>
+            The basic pubsub client implementation, should be used for most applications
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubClient.DefaultClient.SetupPubSub">
+            <summary>
+            Setups the pub sub.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubClient.DefaultClient.client_statusChange(Maple.PubSubClient.eStatus,System.String)">
+            <summary>
+            Callback for the pub sub status being changed.
+            When pubsub is connected it will subscribe to the relevent message.
+            </summary>
+            <param name="status">The status.</param>
+            <param name="feedback">The feedback.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.DefaultClient.client_tick(System.Object,System.EventArgs)">
+            <summary>
+            Callback for the pubsub tick event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.DefaultClient.NotifyOfDataReceived(System.Object)">
+            <summary>
+            Notifies the clients of data received.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Maple.PubSubClient.DefaultClient.Publish(System.Object)">
+            <summary>
+            Publish the data to the server so that subscribed clients can pick it up.  
+            </summary>
+            <param name="dataToSend"></param>
+        </member>
+        <member name="M:Maple.PubSubClient.DefaultClient.PublishReplyToClient(System.Object)">
+            <summary>
+            Publish data back to the client that sent the last message
+            </summary>
+            <param name="dataToSendBack"></param>
+        </member>
+        <member name="P:Maple.PubSubClient.DefaultClient.PubSubKey">
+            <summary>
+            The key to publish and subscribe to (aka hive i.e. \\SecurityChanges\\)
+            </summary>
+            <value>
+            The pub sub key.
+            </value>
+        </member>
+        <member name="T:Maple.PubSubClient.DefaultClient.ClientData">
+            <summary>
+            The class used to house the data being sent
+            </summary>
+        </member>
+        <member name="P:Maple.PubSubClient.DefaultClient.ClientData.ClientID">
+            <summary>
+            The ID of the current client sending the data
+            </summary>
+        </member>
+        <member name="P:Maple.PubSubClient.DefaultClient.ClientData.ForClientID">
+            <summary>
+            The ID of the remote client the data is to be sent to.
+            </summary>
+        </member>
+        <member name="P:Maple.PubSubClient.DefaultClient.ClientData.Data">
+            <summary>
+            The data that is to be sent to the remote client
+            </summary>
+        </member>
+        <member name="T:Maple.PubSubProtocol.eDataType">
+            <summary>
+            The pubsub Data Type
+            </summary>
+        </member>
+        <member name="T:Maple.PubSubProtocol.Data">
+            <summary>
+            The PubSub data class
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Data.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.PubSubProtocol.Data"/> class.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Data.#ctor(Maple.PubSubProtocol.Data)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.PubSubProtocol.Data"/> class.
+            </summary>
+            <param name="initData">The init data.</param>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Data.subscribe(System.Object)">
+            <summary>
+            Subscribes the specified subscriber.
+            </summary>
+            <param name="subscriber">The subscriber.</param>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Data.unsubscribe(System.Object)">
+            <summary>
+            Unsubscribes the specified subscriber.
+            </summary>
+            <param name="subscriber">The subscriber.</param>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Data.isSubscribed(System.Object)">
+            <summary>
+            Determines whether the specified subscriber is subscribed.
+            </summary>
+            <param name="subscriber">The subscriber.</param>
+            <returns>
+              <c>true</c> if the specified subscriber is subscribed; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Data.getSubscriptionCount">
+            <summary>
+            Gets the subscription count.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Data.getSubscriber(System.Int32)">
+            <summary>
+            Gets the subscriber.
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Data.getCallingClassName">
+            <summary>
+            Gets the name of the calling class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.PubSubProtocol.Serialisation">
+            <summary>
+            Handles the PubSub serialisation
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Serialisation.Serialize(Maple.PubSubProtocol.Data)">
+            <summary>
+            Serializes the specified pubsub data.
+            </summary>
+            <param name="pubsubData">The pubsub data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Serialisation.Deserialize(System.Byte[])">
+            <summary>
+            Deserializes the specified bytes.
+            </summary>
+            <param name="bytes">The bytes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Serialisation.CloneObject(System.Object)">
+            <summary>
+            Clones the object.
+            </summary>
+            <param name="aObject">A object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubProtocol.Serialisation.SerializeObject(System.Object)">
+            <summary>
+            Serializes the object.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.PubSubProtocol.Tag">
+            <summary>
+            The PubSub tags
+            </summary>
+        </member>
+        <member name="T:Maple.PubSubServer.DefaultServer">
+            <summary>
+            The basic pubsub server implementation
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubServer.DefaultServer.StartServerConsole">
+            <summary>
+            Starts the pub sub server as a console window
+            </summary>
+        </member>
+        <member name="T:Maple.PubSubServer.Server">
+            <summary>
+            The PubSub Server
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubServer.Server.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.PubSubServer.Server"/> class.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubServer.Server.isShutdown">
+            <summary>
+            Determines whether this instance is shutdown.
+            </summary>
+            <returns>
+              <c>true</c> if this instance is shutdown; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Maple.PubSubServer.Server.run">
+            <summary>
+            Runs this instance.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubServer.Server.doShutDown">
+            <summary>
+            Does the shut down.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubServer.Server.setupControlSocketListener">
+            <summary>
+            Setups the control socket listener.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubServer.Server.controlClient(System.IAsyncResult)">
+            <summary>
+            Controls the client.
+            </summary>
+            <param name="ar">The ar.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.Server.fix_nonFixMessage(Maple.FixMessage.Message,Maple.FixApplication.Application)">
+            <summary>
+            Fix_nons the fix message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="fix">The fix.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubServer.Server.pDataTree_tick(Maple.PubSubProtocol.Data,System.Object)">
+            <summary>
+            Ps the data tree_tick.
+            </summary>
+            <param name="pubSubData">The pub sub data.</param>
+            <param name="subscriber">The subscriber.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.Server.queuePubSubDataForOutboundViaFix(Maple.PubSubProtocol.Data,Maple.FixApplication.Application)">
+            <summary>
+            Queues the pub sub data for outbound via fix.
+            </summary>
+            <param name="pubSubData">The pub sub data.</param>
+            <param name="fix">The fix.</param>
+        </member>
+        <member name="P:Maple.PubSubServer.Server.shutDown">
+            <summary>
+            Gets a value indicating whether [shut down].
+            </summary>
+            <value>
+              <c>true</c> if [shut down]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Maple.PubSubServer.DataTree">
+            <summary>
+            The Server DataTree
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.PubSubServer.DataTree"/> class.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.addValue(System.String,System.Object)">
+            <summary>
+            Adds the value.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="tValue">The t value.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.addValue(System.Int64,System.Object)">
+            <summary>
+            Adds the value.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="tValue">The t value.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.getData(System.String)">
+            <summary>
+            Gets the data.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.getData(System.Int64)">
+            <summary>
+            Gets the data.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.getData(System.String,Maple.PubSubProtocol.Data@)">
+            <summary>
+            Gets the data.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="parent">The parent.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.getData(System.Int64,Maple.PubSubProtocol.Data@)">
+            <summary>
+            Gets the data.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="parent">The parent.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.recurseGetDataByID(Maple.PubSubProtocol.Data,System.Int64,Maple.PubSubProtocol.Data@)">
+            <summary>
+            Recurses the get data by ID.
+            </summary>
+            <param name="pubSubData">The pub sub data.</param>
+            <param name="searchID">The search ID.</param>
+            <param name="parent">The parent.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.recurseGetDataByKey(Maple.PubSubProtocol.Data,System.String,Maple.PubSubProtocol.Data@)">
+            <summary>
+            Recurses the get data by key.
+            </summary>
+            <param name="pubSubData">The pub sub data.</param>
+            <param name="searchKey">The search key.</param>
+            <param name="parent">The parent.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.removeData(System.String)">
+            <summary>
+            Removes the data.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.removeChildren(System.String)">
+            <summary>
+            Removes the children.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.removeClientSubscriptions(System.Object)">
+            <summary>
+            Removes the client subscriptions.
+            </summary>
+            <param name="subscriber">The subscriber.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.recurseAndRemoveSubscriptions(Maple.PubSubProtocol.Data,System.Object)">
+            <summary>
+            Recurses the and remove subscriptions.
+            </summary>
+            <param name="pubSubData">The pub sub data.</param>
+            <param name="subscriber">The subscriber.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.DataTree.raiseTick(Maple.PubSubProtocol.Data)">
+            <summary>
+            Raises the tick.
+            </summary>
+            <param name="pubSubData">The pub sub data.</param>
+        </member>
+        <member name="E:Maple.PubSubServer.DataTree.tick">
+            <summary>
+            Occurs when [tick].
+            </summary>
+        </member>
+        <member name="T:Maple.PubSubServer.PersistenceManager">
+            <summary>
+            The pubsub server persistence manager
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubServer.PersistenceManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.PubSubServer.PersistenceManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Maple.PubSubServer.PersistenceManager.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Maple.PubSubServer.PersistenceManager"/> class.
+            </summary>
+            <param name="pathAndFile">The path and file.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.PersistenceManager.SetUpFile(System.String)">
+            <summary>
+            Sets up file.
+            </summary>
+            <param name="pathAndFile">The path and file.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.PersistenceManager.PersistObject(System.Object)">
+            <summary>
+            Persists the object.
+            </summary>
+            <param name="ObjectToPersist">The object to persist.</param>
+        </member>
+        <member name="M:Maple.PubSubServer.PersistenceManager.ReloadObject">
+            <summary>
+            Reloads the object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.PubSubServer.PersistenceManager.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Maple.Queues.PostMessage(System.String,System.String)">
+            <summary>
+            Posts a message onto a queue (previously setup on SQL Server)
+            </summary>
+            <param name="QueueName">The name of the Queue setup on SQL Server</param>
+            <param name="Message">The message you wish to post to the Queue</param>
+        </member>
+        <member name="M:Maple.Queues.FetchMessage(System.String)">
+            <summary>
+            Fetches a message from the queue, removing it from the queue as it does so. This method will wait for a
+            timeout period (specified in the stored procedure) or until a message is actually received.
+            </summary>
+            <param name="QueueName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Queues.PeekMessages(System.String)">
+            <summary>
+            Returns a list of messages currently on the queue but does not take them off the queue
+            </summary>
+            <param name="QueueName">The name of the Queue setup on SQL Server</param>
+            <returns>A List<string> containing the messages on the queue</string></returns>
+        </member>
+        <member name="M:Maple.Queues.TrimMessage(System.String)">
+            <summary>
+            Takes of the xml tags that surround the message
+            </summary>
+            <param name="message">The message received back from the queue in xml form</param>
+            <returns>The message as a normal string</returns>
+        </member>
+        <member name="T:Maple.Security">
+            <summary>
+            The Security class for encrypting and decrypting strings
+            </summary>
+        </member>
+        <member name="M:Maple.Security.Encrypt(System.String)">
+            <summary>
+            Encrypts the specified input.
+            </summary>
+            <param name="Input">The input.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.Security.Decrypt(System.String)">
+            <summary>
+            Decrypt a crypted string.
+            </summary>
+            <param name="EncryptedString">The encrypted string.</param>
+            <returns>
+            The decrypted string.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">This exception will be thrown
+            when the crypted string is null or empty.</exception>
+        </member>
+        <member name="M:Maple.Database.DatabaseController.GetObjects``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <returns>Strongly typed list of full objects, members populated by fields if names match.</returns>
+        </member>
+        <member name="M:Maple.Database.DatabaseController.GetList``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <returns>Strongly typed list of objects in the first column returned.</returns>
+        </member>
+        <member name="M:Maple.Database.DatabaseController.DataReaderMapToList``1(System.Data.IDataReader)">
+            <summary>
+            Turns datareader into List T using reflection
+            http://stackoverflow.com/questions/1464883/how-can-i-easily-convert-datareader-to-listt
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.DBsettings">
+            <summary>
+            The DSN form
+            </summary>
+        </member>
+        <member name="M:Maple.DBsettings.cmdOK_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the cmdOK control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Maple.DBsettings.GetSettings(System.String@,System.String@,System.String)">
+            <summary>
+            Gets the settings.
+            </summary>
+            <param name="Server">The server.</param>
+            <param name="Database">The database.</param>
+            <param name="dsnname">The dsnname.</param>
+        </member>
+        <member name="F:Maple.DBsettings.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Maple.DBsettings.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Maple.DBsettings.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Maple.DSN">
+            <summary>
+            The DSN class
+            </summary>
+        </member>
+        <member name="T:Maple.SharedDSN">
+            <summary>
+            The Maple DSN functionality
+            </summary>
+        </member>
+        <member name="M:Maple.SharedDSN.SetSourceValues(System.String,System.String@,System.String@)">
+            <summary>
+            Set the server and database settings according to the dsnName private variable
+            </summary>
+            <param name="dsnName">The name by which to store the Server and Database info</param>
+            <param name="Server">Server name - case sensitive</param>
+            <param name="Database">Database name - case sensitive</param>
+        </member>
+        <member name="M:Maple.SharedDSN.GetRegValue(System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            Get a setting from the registry
+            </summary>
+            <param name="User">if set to <c>true</c> [user].</param>
+            <param name="path">The path.</param>
+            <param name="Key">The key.</param>
+            <param name="Default">The default.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SharedDSN.SetRegValue(System.Boolean,System.String,System.String,System.Object)">
+            <summary>
+            Set a value in the registry
+            </summary>
+            <param name="User">if set to <c>true</c> [user].</param>
+            <param name="Path">The path.</param>
+            <param name="Key">The key.</param>
+            <param name="Value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SharedDSN.SetDSNvalue(System.String,System.String,System.String)">
+            <summary>
+            Sets the value of the supplied DSN to the provided server and database
+            </summary>
+            <param name="DSN">The DSN.</param>
+            <param name="Server">The server.</param>
+            <param name="Database">The database.</param>
+        </member>
+        <member name="M:Maple.SharedDSN.GetDSNfileName">
+            <summary>
+            Return the name of the Maple DSN file that holds the connection information
+            </summary>
+            <returns>
+            Exactly what it says on the tin
+            </returns>
+        </member>
+        <member name="T:Maple.SQLServerConnection">
+            <summary>
+            The SQL Server connection
+            </summary>
+        </member>
+        <member name="T:Maple.SQLServer">
+            <summary>
+            SQL Server database functionality.
+            </summary>
+        </member>
+        <member name="M:Maple.SQLServer.#ctor(Maple.SQLServerConnection)">
+            <summary>
+            Pass a previously populated SQLServerConnection object to set up the connection
+            </summary>
+            <param name="conn"></param>
+        </member>
+        <member name="M:Maple.SQLServer.#ctor(System.String)">
+            <summary>
+            Pass the DSN name from which to source the connection information. Uses the MapleDSN file and Windows authentication
+            </summary>
+            <param name="DSNname">The DSN name.</param>
+        </member>
+        <member name="M:Maple.SQLServer.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Pass the DSN name from which to source the connection information. Uses the MapleDSN file and a standard connection with the User and Password provided.
+            </summary>
+            <param name="DSNname">The DSN name.</param>
+            <param name="UID">The UID.</param>
+            <param name="PWD">The PWD.</param>
+        </member>
+        <member name="M:Maple.SQLServer.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Set the server and database to connect to. Pass in a blank UID to activate Windows authentication
+            </summary>
+            <param name="Server">The server.</param>
+            <param name="Database">The database.</param>
+            <param name="UID">The UID.</param>
+            <param name="PWD">The PWD.</param>
+        </member>
+        <member name="M:Maple.SQLServer.Close(System.Boolean,System.Boolean)">
+            <summary>
+            Closes underlying SQL connection.
+            </summary>
+            <param name="allowReconnect">Allow reconnections.</param>
+            <param name="swallowExceptions">Swallow all exceptions on close.</param>
+        </member>
+        <member name="M:Maple.SQLServer.Close">
+            <summary>
+            Closes the SQL connection. This must be called before its parent goes out of scope.
+            </summary>
+        </member>
+        <member name="M:Maple.SQLServer.ConnectedServer">
+            <summary>
+            Returns the name of the server the current connection is connected to
+            by using the SQL command @@SERVERNAME
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.ConnectedDatabase">
+            <summary>
+            Returns the name of the database the current connection is connected to
+            by using the SQL command DB_NAME()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.FetchDataReader(System.String)">
+            <summary>
+            Fetch dataReader according to the sql script provided.
+            </summary>
+            <param name="SQL">The SQL.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.FetchDataReader(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            Fetch dataReader according to the sql script provided.
+            </summary>
+            <param name="sqlCommand">The SQL command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.FetchData(System.String)">
+            <summary>
+            Fetch data according to the sql script provided.
+            </summary>
+            <param name="SQL">The SQL.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.FetchData(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            Fetch data using the sqlCommand provided.
+            </summary>
+            <param name="sqlCommand">The SQL command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.FetchData(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlDataAdapter@,System.Data.MissingSchemaAction)">
+            <summary>
+            Returns a DataSet but also passes back by reference the sqlDataAdapter used to create it.
+            </summary>
+            <param name="sqlCommand">The SQL command.</param>
+            <param name="DA">The DA.</param>
+            <param name="Action">The action.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.FetchAdapter(System.String)">
+            <summary>
+            Gets a sqlDataAdapter created from the sqlCommand and includes the current connection
+            </summary>
+            <param name="SQL">The SQL.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.FetchAdapter(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            Gets a sqlDataAdapter created from the input sqlCommand and includes the current connection
+            </summary>
+            <param name="sqlCommand">The SQL command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.ExecSql(System.String)">
+            <summary>
+            Execute a sql statement and do not return any result set. Returns and empty string if no errors occurred or the error message if one did occur.
+            </summary>
+            <param name="SQL">The SQL.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.ExecSql(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            Execute a sql statement and do not return any result set. Returns and empty string if no errors occurred or the error message if one did occur.
+            </summary>
+            <param name="sqlCommand">The SQL command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.SetConnection">
+            <summary>
+            Set up the connection string and connect to the database.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.ConnectionInfo">
+            <summary>
+            Get the current connection information by querying the connected database.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.SetDSNvalue(System.String,System.String,System.String)">
+            <summary>
+            Sets the value of the supplied DSN to the provided server and database
+            </summary>
+            <param name="DSN">The DSN.</param>
+            <param name="Server">The server.</param>
+            <param name="Database">The database.</param>
+        </member>
+        <member name="F:Maple.SQLServer.staticTimeOut">
+            <summary>
+            Default time out but can be changed.
+            </summary>
+        </member>
+        <member name="F:Maple.SQLServer.staticConnectionTimeOut">
+            <summary>
+            Default connection time out but can be changed.
+            </summary>
+        </member>
+        <member name="M:Maple.SQLServer.GetValue(Maple.SQLServerConnection,System.String,System.Object)">
+            <summary>
+            Gets a single value from the script. It selects the first column of the first row.
+            Returns Default if the value is null
+            </summary>
+            <param name="conn">The connection object previously set up with connection info</param>
+            <param name="Sql">The script to run</param>
+            <param name="Default">The value to return if the value found is null</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SQLServer.GetValue(Maple.SQLServerConnection,System.Data.SqlClient.SqlCommand,System.Object)">
+            <summary>
+            Gets a single value from the script. It selects the first column of the first row.
+            Returns Default if the value is null
+            </summary>
+            <param name="conn">The connection object previously set up with connection info</param>
+            <param name="Sql">The script to run</param>
+            <param name="Default">The value to return if the value found is null</param>
+            <returns></returns>
+        </member>
+        <member name="P:Maple.SQLServer.Server">
+            <summary>
+            Specifically get or set the name of the server to connect to.
+            </summary>
+            <value>
+            The server.
+            </value>
+        </member>
+        <member name="P:Maple.SQLServer.Database">
+            <summary>
+            Specifically get or set the name of the database to connect to.
+            </summary>
+            <value>
+            The database.
+            </value>
+        </member>
+        <member name="P:Maple.SQLServer.User">
+            <summary>
+            Get or set the user name to use when not using Windows authentication
+            </summary>
+            <value>
+            The user.
+            </value>
+        </member>
+        <member name="P:Maple.SQLServer.Password">
+            <summary>
+            Get or set the password to use with standard authentication
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Maple.SQLServer.NTauthentication">
+            <summary>
+            Get or set whether to use Windows authentication
+            </summary>
+            <value>
+              <c>true</c> if [N tauthentication]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Maple.SQLServer.defaultLogin">
+            <summary>
+            Get or set whether to use the default login of MPapps
+            </summary>
+            <value>
+              <c>true</c> if [default login]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Maple.SQLServer.Timeout">
+            <summary>
+            Get or set the timeout in seconds of the connection
+            </summary>
+            <value>
+            The timeout.
+            </value>
+        </member>
+        <member name="P:Maple.SQLServer.LogSql">
+            <summary>
+            Determines whether the Sql calls should be logged to file
+            </summary>
+        </member>
+        <member name="P:Maple.SQLServer.Errors">
+            <summary>
+            Get or set an error message
+            </summary>
+            <value>
+            The errors.
+            </value>
+        </member>
+        <member name="P:Maple.SQLServer.ConnectionTimeout">
+            <summary>
+            Gets or sets the connection timeout.
+            </summary>
+            <value>
+            The connection timeout.
+            </value>
+        </member>
+        <member name="P:Maple.SQLServer.ConnectionString">
+            <summary>
+            Returns current connection string.
+            </summary>
+            <returns>Current connection string.</returns>
+        </member>
+        <member name="P:Maple.SQLServer.ConnectionObject">
+            <summary>
+            Returns connection object - connects if not already open.
+            </summary>
+        </member>
+        <member name="T:Maple.SupportRequest">
+            <summary>
+            Interacts with the Support Request list in SharePoint
+            </summary>
+        </member>
+        <member name="M:Maple.SupportRequest.AddNewSupportRequest(System.String,System.String,System.String)">
+            <summary>
+            Adds a new support request item to SharePoint.
+            </summary>
+            <param name="title">The title of the support request.</param>
+            <param name="description">The description of the support request.</param>
+            <param name="windowsUser">The windows user including domain name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SupportRequest.GetSharepointUser(System.String)">
+            <summary>
+            Gets the sharepoint user based on the windows name.
+            </summary>
+            <param name="windowsUser">The windows user including domain name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Maple.SupportRequest.GetSharepointDetails(System.String,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            Gets the SharePoint details from the database.
+            </summary>
+            <param name="listName">Name of the list that you want to retrieve.</param>
+            <param name="listURL">The list URL.</param>
+            <param name="listGUID">The list GUID.</param>
+            <param name="viewGUID">The view GUID.</param>
+            <param name="innerXML">The inner XML.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Maple.SharePointLists.Lists">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.#ctor(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetList(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListAndView(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListAndViewAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListAndViewAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteList(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteListAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteListAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddList(System.String,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddListAsync(System.String,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddListAsync(System.String,System.String,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddListFromFeature(System.String,System.String,System.Guid,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddListFromFeatureAsync(System.String,System.String,System.Guid,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddListFromFeatureAsync(System.String,System.String,System.Guid,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateList(System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateListAsync(System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateListAsync(System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListCollection">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListCollectionAsync">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListCollectionAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListItems(System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.Xml.XmlNode,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListItemsAsync(System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.Xml.XmlNode,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListItemsAsync(System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.Xml.XmlNode,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListItemChanges(System.String,System.Xml.XmlNode,System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListItemChangesAsync(System.String,System.Xml.XmlNode,System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListItemChangesAsync(System.String,System.Xml.XmlNode,System.String,System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListItemChangesSinceToken(System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.Xml.XmlNode,System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListItemChangesSinceTokenAsync(System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.Xml.XmlNode,System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListItemChangesSinceTokenAsync(System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.Xml.XmlNode,System.String,System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateListItems(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateListItemsAsync(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateListItemsAsync(System.String,System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddDiscussionBoardItem(System.String,System.Byte[])">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddDiscussionBoardItemAsync(System.String,System.Byte[])">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddDiscussionBoardItemAsync(System.String,System.Byte[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetVersionCollection(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetVersionCollectionAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetVersionCollectionAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddAttachment(System.String,System.String,System.String,System.Byte[])">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddAttachmentAsync(System.String,System.String,System.String,System.Byte[])">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.AddAttachmentAsync(System.String,System.String,System.String,System.Byte[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetAttachmentCollection(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetAttachmentCollectionAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetAttachmentCollectionAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteAttachment(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteAttachmentAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteAttachmentAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.CheckOutFile(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.CheckOutFileAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.CheckOutFileAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UndoCheckOut(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UndoCheckOutAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UndoCheckOutAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.CheckInFile(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.CheckInFileAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.CheckInFileAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListContentTypes(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListContentTypesAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListContentTypesAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListContentType(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListContentTypeAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.GetListContentTypeAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.CreateContentType(System.String,System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.CreateContentTypeAsync(System.String,System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.CreateContentTypeAsync(System.String,System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateContentType(System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateContentTypeAsync(System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateContentTypeAsync(System.String,System.String,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteContentType(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteContentTypeAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteContentTypeAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateContentTypeXmlDocument(System.String,System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateContentTypeXmlDocumentAsync(System.String,System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateContentTypeXmlDocumentAsync(System.String,System.String,System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateContentTypesXmlDocument(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateContentTypesXmlDocumentAsync(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.UpdateContentTypesXmlDocumentAsync(System.String,System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteContentTypeXmlDocument(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteContentTypeXmlDocumentAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.DeleteContentTypeXmlDocumentAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.ApplyContentTypeToList(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.ApplyContentTypeToListAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.ApplyContentTypeToListAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointLists.Lists.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.GetListCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.GetListAndViewCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.DeleteListCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.AddListCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.AddListFromFeatureCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.UpdateListCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.GetListCollectionCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.GetListItemsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.GetListItemChangesCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.GetListItemChangesSinceTokenCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.UpdateListItemsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.AddDiscussionBoardItemCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.GetVersionCollectionCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.AddAttachmentCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.GetAttachmentCollectionCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.DeleteAttachmentCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.CheckOutFileCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.UndoCheckOutCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.CheckInFileCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.GetListContentTypesCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.GetListContentTypeCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.CreateContentTypeCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.UpdateContentTypeCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.DeleteContentTypeCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.UpdateContentTypeXmlDocumentCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.UpdateContentTypesXmlDocumentCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.DeleteContentTypeXmlDocumentCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointLists.Lists.ApplyContentTypeToListCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.GetListCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListAndViewCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListAndViewCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.GetListAndViewCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.DeleteListCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.AddListCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.AddListCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.AddListCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.AddListFromFeatureCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.AddListFromFeatureCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.AddListFromFeatureCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UpdateListCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UpdateListCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.UpdateListCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListCollectionCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListCollectionCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.GetListCollectionCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListItemsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListItemsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.GetListItemsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListItemChangesCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListItemChangesCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.GetListItemChangesCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListItemChangesSinceTokenCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListItemChangesSinceTokenCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.GetListItemChangesSinceTokenCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UpdateListItemsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UpdateListItemsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.UpdateListItemsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.AddDiscussionBoardItemCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.AddDiscussionBoardItemCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.AddDiscussionBoardItemCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetVersionCollectionCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetVersionCollectionCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.GetVersionCollectionCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.AddAttachmentCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.AddAttachmentCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.AddAttachmentCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetAttachmentCollectionCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetAttachmentCollectionCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.GetAttachmentCollectionCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.DeleteAttachmentCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.CheckOutFileCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.CheckOutFileCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.CheckOutFileCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UndoCheckOutCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UndoCheckOutCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.UndoCheckOutCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.CheckInFileCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.CheckInFileCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.CheckInFileCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListContentTypesCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListContentTypesCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.GetListContentTypesCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListContentTypeCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.GetListContentTypeCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.GetListContentTypeCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.CreateContentTypeCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.CreateContentTypeCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.CreateContentTypeCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UpdateContentTypeCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UpdateContentTypeCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.UpdateContentTypeCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.DeleteContentTypeCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.DeleteContentTypeCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.DeleteContentTypeCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UpdateContentTypeXmlDocumentCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UpdateContentTypeXmlDocumentCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.UpdateContentTypeXmlDocumentCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UpdateContentTypesXmlDocumentCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.UpdateContentTypesXmlDocumentCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.UpdateContentTypesXmlDocumentCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.DeleteContentTypeXmlDocumentCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.DeleteContentTypeXmlDocumentCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.DeleteContentTypeXmlDocumentCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.ApplyContentTypeToListCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointLists.ApplyContentTypeToListCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointLists.ApplyContentTypeToListCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.#ctor(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromSite">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromSiteAsync">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromSiteAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromWeb">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromWebAsync">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromWebAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetAllUserCollectionFromWeb">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetAllUserCollectionFromWebAsync">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetAllUserCollectionFromWebAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromGroup(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromGroupAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromGroupAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromRole(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromRoleAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionFromRoleAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollection(System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionAsync(System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserCollectionAsync(System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserInfo(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserInfoAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserInfoAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserToGroup(System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserToGroupAsync(System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserToGroupAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserCollectionToGroup(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserCollectionToGroupAsync(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserCollectionToGroupAsync(System.String,System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserToRole(System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserToRoleAsync(System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserToRoleAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserCollectionToRole(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserCollectionToRoleAsync(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddUserCollectionToRoleAsync(System.String,System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateUserInfo(System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateUserInfoAsync(System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateUserInfoAsync(System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromSite(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromSiteAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromSiteAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromSite(System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromSiteAsync(System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromSiteAsync(System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromWeb(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromWebAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromWebAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromGroup(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromGroupAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromGroupAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromGroup(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromGroupAsync(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromGroupAsync(System.String,System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromRole(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromRoleAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserFromRoleAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromRole(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromRoleAsync(System.String,System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromRoleAsync(System.String,System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromSite">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromSiteAsync">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromSiteAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromWeb">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromWebAsync">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromWebAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromRole(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromRoleAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromRoleAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromUser(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromUserAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromUserAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollection(System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionAsync(System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupCollectionAsync(System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupInfo(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupInfoAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetGroupInfoAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddGroup(System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddGroupAsync(System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddGroupAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddGroupToRole(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddGroupToRoleAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddGroupToRoleAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateGroupInfo(System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateGroupInfoAsync(System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateGroupInfoAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveGroup(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveGroupAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveGroupAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveGroupFromRole(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveGroupFromRoleAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveGroupFromRoleAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromWeb">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromWebAsync">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromWebAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromGroup(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromGroupAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromGroupAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromUser(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromUserAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromUserAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollection(System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionAsync(System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleCollectionAsync(System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleInfo(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleInfoAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRoleInfoAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddRole(System.String,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddRoleAsync(System.String,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddRoleAsync(System.String,System.String,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddRoleDef(System.String,System.String,System.UInt64)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddRoleDefAsync(System.String,System.String,System.UInt64)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.AddRoleDefAsync(System.String,System.String,System.UInt64,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateRoleInfo(System.String,System.String,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateRoleInfoAsync(System.String,System.String,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateRoleInfoAsync(System.String,System.String,System.String,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateRoleDefInfo(System.String,System.String,System.String,System.UInt64)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateRoleDefInfoAsync(System.String,System.String,System.String,System.UInt64)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.UpdateRoleDefInfoAsync(System.String,System.String,System.String,System.UInt64,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveRole(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveRoleAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.RemoveRoleAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserLoginFromEmail(System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserLoginFromEmailAsync(System.Xml.XmlNode)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetUserLoginFromEmailAsync(System.Xml.XmlNode,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRolesAndPermissionsForCurrentUser">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRolesAndPermissionsForCurrentUserAsync">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRolesAndPermissionsForCurrentUserAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRolesAndPermissionsForSite">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRolesAndPermissionsForSiteAsync">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.GetRolesAndPermissionsForSiteAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Maple.SharePointUsers.UserGroup.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetUserCollectionFromSiteCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetUserCollectionFromWebCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetAllUserCollectionFromWebCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetUserCollectionFromGroupCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetUserCollectionFromRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetUserCollectionCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetUserInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.AddUserToGroupCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.AddUserCollectionToGroupCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.AddUserToRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.AddUserCollectionToRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.UpdateUserInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.RemoveUserFromSiteCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromSiteCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.RemoveUserFromWebCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.RemoveUserFromGroupCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromGroupCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.RemoveUserFromRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.RemoveUserCollectionFromRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromSiteCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromWebCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetGroupCollectionFromUserCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetGroupCollectionCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetGroupInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.AddGroupCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.AddGroupToRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.UpdateGroupInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.RemoveGroupCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.RemoveGroupFromRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromWebCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromGroupCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetRoleCollectionFromUserCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetRoleCollectionCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetRoleInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.AddRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.AddRoleDefCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.UpdateRoleInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.UpdateRoleDefInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.RemoveRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetUserLoginFromEmailCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetRolesAndPermissionsForCurrentUserCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Maple.SharePointUsers.UserGroup.GetRolesAndPermissionsForSiteCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserCollectionFromSiteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserCollectionFromSiteCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetUserCollectionFromSiteCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserCollectionFromWebCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserCollectionFromWebCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetUserCollectionFromWebCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetAllUserCollectionFromWebCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetAllUserCollectionFromWebCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetAllUserCollectionFromWebCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserCollectionFromGroupCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserCollectionFromGroupCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetUserCollectionFromGroupCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserCollectionFromRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserCollectionFromRoleCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetUserCollectionFromRoleCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserCollectionCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserCollectionCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetUserCollectionCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserInfoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetUserInfoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.AddUserToGroupCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.AddUserCollectionToGroupCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.AddUserToRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.AddUserCollectionToRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.UpdateUserInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.RemoveUserFromSiteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.RemoveUserCollectionFromSiteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.RemoveUserFromWebCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.RemoveUserFromGroupCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.RemoveUserCollectionFromGroupCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.RemoveUserFromRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.RemoveUserCollectionFromRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupCollectionFromSiteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupCollectionFromSiteCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetGroupCollectionFromSiteCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupCollectionFromWebCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupCollectionFromWebCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetGroupCollectionFromWebCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupCollectionFromRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupCollectionFromRoleCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetGroupCollectionFromRoleCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupCollectionFromUserCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupCollectionFromUserCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetGroupCollectionFromUserCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupCollectionCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupCollectionCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetGroupCollectionCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetGroupInfoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetGroupInfoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.AddGroupCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.AddGroupToRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.UpdateGroupInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.RemoveGroupCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.RemoveGroupFromRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRoleCollectionFromWebCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRoleCollectionFromWebCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetRoleCollectionFromWebCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRoleCollectionFromGroupCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRoleCollectionFromGroupCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetRoleCollectionFromGroupCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRoleCollectionFromUserCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRoleCollectionFromUserCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetRoleCollectionFromUserCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRoleCollectionCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRoleCollectionCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetRoleCollectionCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRoleInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRoleInfoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetRoleInfoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.AddRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.AddRoleDefCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.UpdateRoleInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.UpdateRoleDefInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.RemoveRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserLoginFromEmailCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetUserLoginFromEmailCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetUserLoginFromEmailCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRolesAndPermissionsForCurrentUserCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRolesAndPermissionsForCurrentUserCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetRolesAndPermissionsForCurrentUserCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRolesAndPermissionsForSiteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Maple.SharePointUsers.GetRolesAndPermissionsForSiteCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Maple.SharePointUsers.GetRolesAndPermissionsForSiteCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+    </members>
+</doc>

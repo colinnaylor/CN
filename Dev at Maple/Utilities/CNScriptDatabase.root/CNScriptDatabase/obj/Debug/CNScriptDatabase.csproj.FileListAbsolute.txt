@@ -1,0 +1,14 @@
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\bin\Debug\CNScriptDatabase.exe.config
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\bin\Debug\CNscriptDatabase.ini
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\bin\Debug\CNScriptDatabase.exe
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\bin\Debug\CNScriptDatabase.pdb
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\bin\Debug\Maple.dll
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\bin\Debug\Microsoft.VisualStudio.SourceSafe.Interop.dll
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\bin\Debug\System.Management.dll
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\bin\Debug\Maple.pdb
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\bin\Debug\Maple.xml
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\obj\Debug\CNScriptDatabase.csprojResolveAssemblyReference.cache
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\obj\Debug\Microsoft.Samples.SqlServer.CNDBScript.resources
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\obj\Debug\CNScriptDatabase.csproj.GenerateResource.Cache
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\obj\Debug\CNScriptDatabase.exe
+C:\Users\colin\Documents\_Dev\Utilities\CNScriptDatabase.root\CNScriptDatabase\obj\Debug\CNScriptDatabase.pdb

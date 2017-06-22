@@ -1,0 +1,14 @@
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Debug\JiraWork.exe.config
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Debug\JiraWork.exe
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Debug\JiraWork.pdb
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Debug\Atlassian.Jira.dll
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Debug\Maple.dll
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Debug\Atlassian.Jira.pdb
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Debug\Atlassian.Jira.xml
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Debug\Maple.pdb
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\bin\Debug\Maple.xml
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Debug\Jira_Connection.Form1.resources
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Debug\Jira_Connection.Properties.Resources.resources
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Debug\Jira Work.csproj.GenerateResource.Cache
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Debug\JiraWork.exe
+c:\Users\colin\Documents\_Dev\Utilities\Jira\Jira Work\obj\Debug\JiraWork.pdb

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="OptionValue_DotNet.Option">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="OptionValue_DotNet.Option.OptionType">
+        <TypeIdentifier>
+          <NewMemberFileName>Option.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="OptionValue_DotNet.Option.OptionStyle">
+        <TypeIdentifier>
+          <NewMemberFileName>Option.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAJQCAAEAkgAAAAQAABAAIAAgAACABAABQAAAAAAAAA=</HashCode>
+      <FileName>Option.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="UnderlyingDividends" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OptionValue_DotNet.Dividend">
+    <Position X="6" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACEAAAAAAAAAAAICAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Dividend.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBfieldValueRetriever", "BBfieldValueRetriever\BBfieldValueRetriever.csproj", "{19C0C6EF-A338-490E-A9B8-994B68AC3390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBFieldValueRetrieverTests", "BBFieldValueRetrieverTests\BBFieldValueRetrieverTests.csproj", "{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		UAT|Any CPU = UAT|Any CPU
+		UAT|x86 = UAT|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19C0C6EF-A338-490E-A9B8-994B68AC3390}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{19C0C6EF-A338-490E-A9B8-994B68AC3390}.Debug|x86.ActiveCfg = Debug|x86
+		{19C0C6EF-A338-490E-A9B8-994B68AC3390}.Debug|x86.Build.0 = Debug|x86
+		{19C0C6EF-A338-490E-A9B8-994B68AC3390}.Release|Any CPU.ActiveCfg = Release|x86
+		{19C0C6EF-A338-490E-A9B8-994B68AC3390}.Release|x86.ActiveCfg = Release|x86
+		{19C0C6EF-A338-490E-A9B8-994B68AC3390}.Release|x86.Build.0 = Release|x86
+		{19C0C6EF-A338-490E-A9B8-994B68AC3390}.UAT|Any CPU.ActiveCfg = UAT|x86
+		{19C0C6EF-A338-490E-A9B8-994B68AC3390}.UAT|x86.ActiveCfg = UAT|x86
+		{19C0C6EF-A338-490E-A9B8-994B68AC3390}.UAT|x86.Build.0 = UAT|x86
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.Debug|x86.Build.0 = Debug|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.Release|x86.ActiveCfg = Release|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.Release|x86.Build.0 = Release|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.UAT|Any CPU.ActiveCfg = Release|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.UAT|Any CPU.Build.0 = Release|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.UAT|x86.ActiveCfg = Release|Any CPU
+		{C7FA9712-50A6-4DC2-9A96-11CDCB78DC70}.UAT|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

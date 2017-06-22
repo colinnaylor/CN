@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{649FA033-B573-4F25-95C1-DF70DAD71455}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		OptionValue_DotNet.vsmdi = OptionValue_DotNet.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptionValue_DotNet", "OptionValue_DotNet\OptionValue_DotNet.csproj", "{D2472444-36C0-491C-BD13-2F221DB645C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptionValue_DotNet_Test", "OptionValue_DotNet_Test\OptionValue_DotNet_Test.csproj", "{4D1378E1-66AF-4F66-A6F4-64A98751780A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTCOptionValuation_BBImporter", "BOSS_OptionValueManager_BBImporter\OTCOptionValuation_BBImporter.csproj", "{01A33614-4066-4537-B96D-A9844BBC6D1C}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = OptionValue_DotNet.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugLocal|Any CPU = DebugLocal|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2472444-36C0-491C-BD13-2F221DB645C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2472444-36C0-491C-BD13-2F221DB645C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2472444-36C0-491C-BD13-2F221DB645C6}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2472444-36C0-491C-BD13-2F221DB645C6}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
+		{D2472444-36C0-491C-BD13-2F221DB645C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2472444-36C0-491C-BD13-2F221DB645C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1378E1-66AF-4F66-A6F4-64A98751780A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1378E1-66AF-4F66-A6F4-64A98751780A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1378E1-66AF-4F66-A6F4-64A98751780A}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1378E1-66AF-4F66-A6F4-64A98751780A}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
+		{4D1378E1-66AF-4F66-A6F4-64A98751780A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1378E1-66AF-4F66-A6F4-64A98751780A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01A33614-4066-4537-B96D-A9844BBC6D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A33614-4066-4537-B96D-A9844BBC6D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A33614-4066-4537-B96D-A9844BBC6D1C}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A33614-4066-4537-B96D-A9844BBC6D1C}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
+		{01A33614-4066-4537-B96D-A9844BBC6D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A33614-4066-4537-B96D-A9844BBC6D1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,231 @@
+﻿-- Systems Test Tool
+------------------------------------------------------------------------------------------------------------------------
+  -- Systems Test Tool Script
+  -- Last edited by Colin Naylor 2014 11 07
+------------------------------------------------------------------------------------------------------------------------
+
+--########################################################################################################
+--Step -- Ping LondonApps1 -- cmd
+
+Ping LondonApps1
+
+--########################################################################################################
+--Step -- Ping LondonFS1 -- cmd
+
+Ping LondonFS1
+
+--########################################################################################################
+--Step -- Ping LondonFS2 -- cmd
+
+Ping LondonFS2
+
+--########################################################################################################
+--Step -- DevMma SQL connectivity -- sql
+
+:Connect DevMma
+select @@Servername
+
+--########################################################################################################
+--Step -- DevLynx SQL connectivity -- sql
+
+:Connect DevLynx
+select @@Servername
+
+--########################################################################################################
+--Step -- DevMinky SQL connectivity -- sql
+
+:Connect DevMinky
+select @@Servername
+
+--########################################################################################################
+--Step -- UatMma SQL connectivity -- sql
+
+:Connect UatMma
+select @@Servername
+
+--########################################################################################################
+--Step -- UatLynx SQL connectivity -- sql
+
+:Connect UatLynx
+select @@Servername
+
+--########################################################################################################
+--Step -- UatMinky SQL connectivity -- sql
+
+:Connect UatMinky
+select @@Servername
+
+--########################################################################################################
+--Step -- Adder SQL connectivity -- sql
+
+:Connect Adder
+select @@Servername
+
+--########################################################################################################
+--Step -- LondonSun1 SQL connectivity -- sql
+
+:Connect LondonSun1
+select @@Servername
+
+--########################################################################################################
+--########################################################################################################
+--  Setup Dev and Uat servers
+
+--########################################################################################################
+--Step -- Fix logins on DevMinky -- sql
+:Connect DevMinky
+sp_FixOrphanedUsersInAllDbs
+--########################################################################################################
+--Step -- Fix logins on DevMma -- sql
+:Connect DevMma
+sp_FixOrphanedUsersInAllDbs
+--########################################################################################################
+--Step -- Fix logins on DevLynx -- sql
+:Connect DevLynx
+sp_FixOrphanedUsersInAllDbs
+--########################################################################################################
+--Step -- Fix logins on UatMinky -- sql
+:Connect UatMinky
+sp_FixOrphanedUsersInAllDbs
+--########################################################################################################
+--Step -- Fix logins on UatMma -- sql
+:Connect UatMma
+sp_FixOrphanedUsersInAllDbs
+--########################################################################################################
+--Step -- Fix logins on UatLynx -- sql
+:Connect UatLynx
+sp_FixOrphanedUsersInAllDbs
+
+--########################################################################################################
+--########################################################################################################
+--Step -- ApexP linked server on DevMinky -- sql
+:Connect DevMinky
+select * from openquery(APEXP,'select * from martini.Account where ACCOUNT_SID = 8')
+--########################################################################################################
+--Step -- ApexP linked server on UatMinky -- sql
+:Connect UatMinky
+select * from openquery(APEXP,'select * from martini.Account where ACCOUNT_SID = 8')
+--########################################################################################################
+--Step -- KondorUK linked server on DevMinky -- sql
+:Connect DevMinky
+select * from openquery(KondorUK,'select @@Servername')
+--########################################################################################################
+--Step -- MMA linked server on DevMinky -- sql
+:Connect DevMinky
+select * from openquery(MMA,'select @@Servername')
+--########################################################################################################
+--Step -- Status linked server on DevMinky -- sql
+:Connect DevMinky
+select * from openquery(Status,'select @@Servername')
+--########################################################################################################
+--Step -- KondorTest linked server on UatMinky -- sql
+:Connect UatMinky
+select * from openquery(KondorTest,'select @@Servername')
+--########################################################################################################
+--Step -- KondorUK linked server on UatMinky -- sql
+:Connect UatMinky
+select * from openquery(KondorUK,'select @@Servername')
+--########################################################################################################
+--Step -- MMA linked server on UatMinky -- sql
+:Connect UatMinky
+select * from openquery(MMA,'select @@Servername')
+--########################################################################################################
+--Step -- Status linked server on UatMinky -- sql
+:Connect UatMinky
+select * from openquery(Status,'select @@Servername')
+--########################################################################################################
+--Step -- Boss linked server on DevLynx -- sql
+:Connect DevLynx
+select * from openquery(Boss,'select @@Servername')
+--########################################################################################################
+--Step -- DR linked server on DevLynx -- sql
+:Connect DevLynx
+select * from openquery(DR,'select @@Servername')
+--########################################################################################################
+--Step -- Kondor linked server on DevLynx -- sql
+:Connect DevLynx
+select * from openquery(Kondor,'select @@Servername')
+--########################################################################################################
+--Step -- MMA linked server on DevLynx -- sql
+:Connect DevLynx
+select * from openquery(MMA,'select @@Servername')
+--########################################################################################################
+--Step -- NJ linked server on DevLynx -- sql
+:Connect DevLynx
+select * from openquery(NJ,'select @@Servername')
+--########################################################################################################
+--Step -- Toronto linked server on DevLynx -- sql
+:Connect DevLynx
+select * from openquery(Toronto,'select @@Servername')
+--########################################################################################################
+--Step -- TorontoReporting linked server on DevLynx -- sql
+:Connect DevLynx
+select * from openquery(TorontoReporting,'select @@Servername')
+--########################################################################################################
+--Step -- Boss linked server on UatLynx -- sql
+:Connect UatLynx
+select * from openquery(Boss,'select @@Servername')
+--########################################################################################################
+--Step -- DR linked server on UatLynx -- sql
+:Connect UatLynx
+select * from openquery(DR,'select @@Servername')
+--########################################################################################################
+--Step -- Kondor linked server on UatLynx -- sql
+:Connect UatLynx
+select * from openquery(Kondor,'select @@Servername')
+--########################################################################################################
+--Step -- MMA linked server on UatLynx -- sql
+:Connect UatLynx
+select * from openquery(MMA,'select @@Servername')
+--########################################################################################################
+--Step -- NJ linked server on UatLynx -- sql
+:Connect UatLynx
+select * from openquery(NJ,'select @@Servername')
+--########################################################################################################
+--Step -- Toronto linked server on UatLynx -- sql
+:Connect UatLynx
+select * from openquery(Toronto,'select @@Servername')
+--########################################################################################################
+--Step -- TorontoReporting linked server on UatLynx -- sql
+:Connect UatLynx
+select * from openquery(TorontoReporting,'select @@Servername')
+--########################################################################################################
+--Step -- BOSS linked server on DevMma -- sql
+:Connect DevMma
+select * from openquery(BOSS,'select @@Servername')
+--########################################################################################################
+--Step -- BOSSXRT linked server on DevMma -- sql
+:Connect DevMma
+select * from openquery(BOSSXRT,'select @@Servername')
+--########################################################################################################
+--Step -- KONDOR linked server on DevMma -- sql
+:Connect DevMma
+select * from openquery(KONDOR,'select @@Servername')
+--########################################################################################################
+--Step -- STATUS linked server on DevMma -- sql
+:Connect DevMma
+select * from openquery(STATUS,'select @@Servername')
+--########################################################################################################
+--Step -- BOSS linked server on UatMma -- sql
+:Connect UatMma
+select * from openquery(BOSS,'select @@Servername')
+--########################################################################################################
+--Step -- BOSSXRT linked server on UatMma -- sql
+:Connect UatMma
+select * from openquery(BOSSXRT,'select @@Servername')
+--########################################################################################################
+--Step -- KONDOR linked server on UatMma -- sql
+:Connect UatMma
+select * from openquery(KONDOR,'select @@Servername')
+--########################################################################################################
+--Step -- STATUS linked server on UatMma -- sql
+:Connect UatMma
+select * from openquery(STATUS,'select @@Servername')
+
+--########################################################################################################
+--Step -- Read folder S:\Dev -- cmd
+dir s:\dev
+--########################################################################################################
+--Step -- Read folder h:\ -- cmd
+dir h:\
+

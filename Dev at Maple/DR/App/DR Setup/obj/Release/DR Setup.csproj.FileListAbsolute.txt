@@ -1,0 +1,29 @@
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\AdminApp\Admin process app.exe
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\AdminApp\Admin process app.pdb
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Files\DRworkstation.sql
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Files\DR.sql
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Files\DRclose.sql
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Files\MapleDSN.txt
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Utils\Replace.exe
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\AdminApp\Admin process app.exe.config
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Files\AccessMacroSecurityLevel.reg
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Files\Alias.reg
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Files\ExcelMacroSecurityLevel.reg
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Files\Login.cmd
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Files\RegisterTradereporterDLLs.bat
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Files\VisionAddIn.reg
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\DR Setup.exe.config
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\DR Setup.exe
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\DR Setup.pdb
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Maple.dll
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Maple.pdb
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Maple.xml
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\obj\Release\DR_Setup.Form1.resources
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\obj\Release\DR_Setup.Properties.Resources.resources
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\obj\Release\DR Setup.csproj.GenerateResource.Cache
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\obj\Release\DR Setup.exe
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\obj\Release\DR Setup.pdb
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\obj\Release\DR Setup.csprojResolveAssemblyReference.cache
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\Desktop\Boss2000 User Dsn.reg
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\NLog.dll
+C:\Users\colin\Documents\_Dev\DR\App\DR Setup\bin\Release\NLog.xml

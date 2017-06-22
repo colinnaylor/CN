@@ -1,0 +1,25 @@
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Systems Test Tool.exe.config
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Files\DevScript.txt
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\AdminApp\Admin process app.exe
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\AdminApp\Admin process app.pdb
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\AdminApp\Admin process app.vshost.exe
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Utils\Replace.exe
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\AdminApp\Admin process app.exe.config
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\AdminApp\Admin process app.vshost.exe.config
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\AdminApp\Admin process app.vshost.exe.manifest
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Systems Test Tool.exe
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Systems Test Tool.pdb
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Maple.dll
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Maple.pdb
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Maple.xml
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\obj\Debug\Systems Test Tool.csprojResolveAssemblyReference.cache
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\obj\Debug\SystemsTestTool.Form1.resources
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\obj\Debug\SystemsTestTool.Properties.Resources.resources
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\obj\Debug\Systems Test Tool.csproj.GenerateResource.Cache
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\obj\Debug\Systems Test Tool.exe
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\obj\Debug\Systems Test Tool.pdb
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Files\LiveScript.txt
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\NLog.dll
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\NLog.xml
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Files\RunBoss.cmd
+C:\Users\colin\Documents\_Dev\Utilities\SystemsTestTool\bin\Debug\Files\DRscript.txt

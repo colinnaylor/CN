@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FTP_Retriever.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TimerInterval" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">10000</Value>
+    </Setting>
+    <Setting Name="FileStorageRoot" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">s:\db\FTP\</Value>
+    </Setting>
+    <Setting Name="FtpDetailServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Skunk\Sharepoint</Value>
+    </Setting>
+    <Setting Name="FtpDetailDatabase" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MSUK_Views</Value>
+    </Setting>
+    <Setting Name="ShowLog" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MinutesBetweenChecks" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="PubsubServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LondonApps1</Value>
+    </Setting>
+    <Setting Name="MinutesBetweenEmails" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="LSESTAGING" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Map2two</Value>
+    </Setting>
+    <Setting Name="Test_FtpDSN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Test_FtpData</Value>
+    </Setting>
+    <Setting Name="FtpDSN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">FtpData</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
