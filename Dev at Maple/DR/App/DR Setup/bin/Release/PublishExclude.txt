@@ -1,2 +1,0 @@
-PublishExclude.txt
-Publish.cmd
